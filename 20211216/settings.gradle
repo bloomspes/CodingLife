@@ -9,3 +9,5 @@
 
 rootProject.name = 'Arrays'
 include('app')
+include 'taxi'
+
