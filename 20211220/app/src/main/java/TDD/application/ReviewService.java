@@ -1,5 +1,11 @@
-package TDD;
+package TDD.application;
 
+import TDD.infra.GiftApi;
+import TDD.domain.Review;
+import TDD.infra.ReviewRepository;
+import TDD.errors.DuplicateSendGiftException;
+import TDD.errors.ReviewNotFoundException;
+import TDD.errors.SendGiftInternalException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
