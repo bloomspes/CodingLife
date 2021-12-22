@@ -1,4 +1,4 @@
-package TDD;
+package TDD.errors;
 
 
 import org.springframework.http.HttpStatus;
