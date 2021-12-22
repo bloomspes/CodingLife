@@ -1,4 +1,4 @@
-package TDD;
+package TDD.ui;
 
 public class ReviewController {
 }
