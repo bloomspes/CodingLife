@@ -23,6 +23,6 @@ class SolutionTest {
 
     @Test
     void sample() {
-        assertEquals(19, result.hourglassSum();
+        assertEquals(19, result.hourglassSum());
     }
 }
