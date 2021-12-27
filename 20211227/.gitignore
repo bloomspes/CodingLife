@@ -1,0 +1,11 @@
+### VSCode ###
+.vscode/
+
+### Node.js ###
+node_modules/
+
+
+
+### Parcel ###
+/.parcel-cache/
+/dist/
