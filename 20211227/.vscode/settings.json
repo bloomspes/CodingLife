@@ -1,0 +1,10 @@
+{
+    "git.ignoreLimitWarning": true,
+    "editor.rulers": [
+        80
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "trailing-spaces.trimOnSave": true,
+}
