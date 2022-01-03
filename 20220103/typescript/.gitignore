@@ -1,0 +1,9 @@
+### Parcel ###
+/.parcel-cache/
+/dist/
+
+### VSCode ###
+.vscode/
+
+### Node ###
+node_modules/
