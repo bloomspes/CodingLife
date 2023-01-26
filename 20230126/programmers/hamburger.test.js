@@ -1,7 +1,7 @@
 const hamburger = [1, 2, 3, 1];
 
 const packed = (ingredients, start) => {
-  for (let i = start; i < ingredients.length - 3; i++) {
+  for (let i = start; i < ingredients.length - 3; i += 1) {
     if (ingredients[i] === hamburger[0]
             && ingredients[i + 1] === hamburger[1]
             && ingredients[i + 2] === hamburger[2]
