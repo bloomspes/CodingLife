@@ -65,7 +65,7 @@ const completes = (progresses, index = -1) => {
     return completes(progresses.slice(1), index + 1);
 }
 
-const first = (arr) => arr[0];
+
 
 
 test('solution2', () => {
