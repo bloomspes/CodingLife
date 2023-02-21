@@ -13,21 +13,7 @@ class Alphabet {
     }
   }
 
-
-// const remove = (skip) => {
-//   const alphabets = [...'abcdefghijklmnopqrstuvwxyz'];
-//   return alphabets.filter((char) => !skip.includes(char));
-// };
-
-// const jump = (char, offset, charSet) => {
-//   const index = charSet.indexOf(char);
-//   const newIndex = (index + offset) % charSet.length;
-//   return charSet[newIndex];
-// };
-
 const encode = (string, skip, offset) => {
-  // const charSet = remove(skip);
-
   const charSet = new Alphabet({ excludes: skip })
 
   return [...string]
