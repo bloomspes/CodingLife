@@ -53,126 +53,137 @@
 
 // [3, 2, 0, 0, 0, 0, 0, 0, 0, 0]
 // 점수차이 합산 => 10 + 9 -
+
 function calculateScoreDifference(scores, appeachScores) {
-    return scores.reduce((totalScore, lionScore, index) => {
-      if (lionScore === 0 && appeachScores[index] > 0) {
-        return totalScore - (10 - index);
-      }
-  
-      if (lionScore > 0) {
-        return totalScore + 10 - index;
-      }
-  
-      return totalScore;
-    }, 0);
-  }
-  
-  test('calculateScoreDifference', () => {
-    expect(calculateScoreDifference(
-      [3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [2, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
-    )).toBe(4);
-    expect(calculateScoreDifference(
-      [0, 2, 2, 0, 1, 0, 0, 0, 0, 0, 0],
-      [2, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
-    )).toBe(6);
-  });
-  
-  function maxNonZeroIndex(numbers) {
-    return numbers.length - [...numbers].reverse().findIndex((n) => n !== 0) - 1;
-  }
-  
-  test('maxNonZeroIndex', () => {
-    expect(maxNonZeroIndex([2, 0, 2, 3, 0, 1, 0, 0, 0, 0, 0])).toBe(5);
-    expect(maxNonZeroIndex([2, 0, 2, 3, 0, 1, 1, 0, 0, 0, 0])).toBe(6);
-    expect(maxNonZeroIndex([2, 0, 2, 3, 0, 1, 0, 0, 0, 5, 0])).toBe(9);
-  });
-  
-  function solution({ n, appeachScores }) {
-    const shoots = [];
-  
-    function shot({ arrows, status }) {
-      if (arrows < 0 || status.length > 11) {
-        return;
-      }
-  
-      if (arrows === 0) {
-        const trailingZeros = Array(11 - status.length).fill(0);
-  
-        shoots.push({
-          totalScore: calculateScoreDifference(
-            [...status, ...trailingZeros],
-            appeachScores,
-          ),
-          status: [...status, ...trailingZeros],
-        });
-  
-        return;
-      }
-  
-      // 지금과녁이 0일때
-      if (status.length === 10) {
-        // 나머지 화살 다 쏜다!!
-        shoots.push({
-          totalScore: calculateScoreDifference(
-            [...status, arrows],
-            appeachScores,
-          ),
-          status: [...status, arrows],
-        });
-        return;
-      }
-  
-      // 어피치를 이긴다.
-      const shotCount = (appeachScores[status.length]) + 1;
-      shot({
-        arrows: arrows - shotCount,
-        status: [...status, shotCount],
-      });
-      // 이번엔 진다.
-      shot({
-        arrows,
-        status: [...status, 0],
-      });
+  return scores.reduce((totalScore, lionScore, index) => {
+    if (lionScore === 0 && appeachScores[index] > 0) {
+      return totalScore - (10 - index);
     }
-  
-    shot({ arrows: n, status: [] }); // 사격하면서 화살이 남지 않으면 기록
-  
-    const [bestShoot] = shoots
-      .sort((a, b) => maxNonZeroIndex(b.status) - maxNonZeroIndex(a.status)) // 가장 낮은 점수를 더 많이 맞췄다.
-      .sort((a, b) => b.totalScore - a.totalScore);
-  
-    // 라이언 못이김
-    if (bestShoot.totalScore < 0) {
-      return [-1];
+
+    if (lionScore > 0) {
+      return totalScore + 10 - index;
     }
-  
-    return bestShoot.status;
+
+    return totalScore;
+  }, 0);
+}
+
+function maxNonZeroIndex(numbers) {
+  return numbers.length - [...numbers].reverse().findIndex((n) => n !== 0) - 1;
+}
+
+function solution({ n, appeachScores }) {
+  const shoots = [];
+
+  function shot({ arrows, status }) {
+    if (arrows < 0 || status.length > 11) {
+      return;
+    }
+
+    if (arrows === 0) {
+      const trailingZeros = Array(11 - status.length).fill(0);
+
+      shoots.push({
+        totalScore: calculateScoreDifference(
+          [...status, ...trailingZeros],
+          appeachScores,
+        ),
+        status: [...status, ...trailingZeros],
+      });
+
+      return;
+    }
+
+    // 지금과녁이 0일때
+    if (status.length === 10) {
+      // 나머지 화살 다 쏜다!!
+      shoots.push({
+        totalScore: calculateScoreDifference(
+          [...status, arrows],
+          appeachScores,
+        ),
+        status: [...status, arrows],
+      });
+      return;
+    }
+
+    // 어피치를 이긴다.
+    const shotCount = (appeachScores[status.length]) + 1;
+    shot({
+      arrows: arrows - shotCount,
+      status: [...status, shotCount],
+    });
+    // 이번엔 진다.
+    shot({
+      arrows,
+      status: [...status, 0],
+    });
   }
-  
-  test('sample', () => {
-    expect(solution({
-      n: 5,
-      appeachScores: [2, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
-    }))
-      .toEqual([0, 2, 2, 0, 1, 0, 0, 0, 0, 0, 0]);
-  
-    expect(solution({
-      n: 9,
-      appeachScores: [0, 0, 1, 2, 0, 1, 1, 1, 1, 1, 1],
-    }))
-      .toEqual([1, 1, 2, 0, 1, 2, 2, 0, 0, 0, 0]);
-  
-    expect(solution({
-      n: 10,
-      appeachScores: [0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 3],
-    }))
-      .toEqual([1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 2]);
-  
-    expect(solution({
-      n: 1,
-      appeachScores: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    }))
-      .toEqual([-1]);
-  });
-  
+
+  shot({ arrows: n, status: [] }); // 사격하면서 화살이 남지 않으면 기록
+
+  const [bestShoot] = shoots
+    .sort((a, b) => maxNonZeroIndex(b.status) - maxNonZeroIndex(a.status)) // 가장 낮은 점수를 더 많이 맞췄다.
+    .sort((a, b) => b.totalScore - a.totalScore);
+
+  // 라이언 못이김, 비길수도
+  if (bestShoot.totalScore <= 0) {
+    return [-1];
+  }
+
+  return bestShoot.status;
+}
+
+test('calculateScoreDifference', () => {
+  expect(calculateScoreDifference(
+    [3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [2, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+  )).toBe(4);
+  expect(calculateScoreDifference(
+    [0, 2, 2, 0, 1, 0, 0, 0, 0, 0, 0],
+    [2, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+  )).toBe(6);
+});
+
+test('maxNonZeroIndex', () => {
+  expect(maxNonZeroIndex([2, 0, 2, 3, 0, 1, 0, 0, 0, 0, 0])).toBe(5);
+  expect(maxNonZeroIndex([2, 0, 2, 3, 0, 1, 1, 0, 0, 0, 0])).toBe(6);
+  expect(maxNonZeroIndex([2, 0, 2, 3, 0, 1, 0, 0, 0, 5, 0])).toBe(9);
+});
+
+test('sample', () => {
+  expect(solution({
+    n: 5,
+    appeachScores: [2, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+  }))
+    .toEqual([0, 2, 2, 0, 1, 0, 0, 0, 0, 0, 0]);
+
+  expect(solution({
+    n: 9,
+    appeachScores: [0, 0, 1, 2, 0, 1, 1, 1, 1, 1, 1],
+  }))
+    .toEqual([1, 1, 2, 0, 1, 2, 2, 0, 0, 0, 0]);
+
+  expect(solution({
+    n: 10,
+    appeachScores: [0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 3],
+  }))
+    .toEqual([1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 2]);
+
+  expect(solution({
+    n: 1,
+    appeachScores: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  }))
+    .toEqual([-1]);
+});
+
+
+// #. Bad.
+// - shot 을 테스트 할 수 없었던게 패착. 가장 큰 패배 요인.
+//  => 디버깅에 엄청난 시간.
+//  => 무지성으로 막 결과를 여러개 프린트해봄. => 이걸 안할 수 있다면
+//  => 이러면 혼이 나간다, 포기하게 된다
+
+// #. Good.
+// - 최소한 기도메타로 코드 수정은 안함.
+// - tricky 한 로직은 별도의 함수로 분리후 테스트함.
