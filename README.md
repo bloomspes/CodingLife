@@ -1,2 +1,2 @@
-# tiny-project
+# CodingLife
 daily code.
