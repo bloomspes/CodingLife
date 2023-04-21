@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>Bowling point calcualor</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      table {
+        border: 1px solid #DDD;
+        border-collapse: collapse;
+      }
+
+      th, td {
+        height: 2.5em;
+        border: 1px solid #DDD;
+        text-align: center;
+      }
+
+      td {
+        min-width: 2.5em;
+      }
+
+      td:last-of-type {
+        padding-inline: .5em;
+      }
+
+      th.current,
+      td.current {
+        background: #EEE;
+      }
+
+      form p {
+        margin-top: 3em;
+      }
+
+      form label {
+        display: none;
+      }
+
+      form input,
+      form button {
+        font-size: 50px;
+      }
+
+      form input {
+        width: 4em;
+      }
+
+      form input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      Loading...
+    </div>
+    <script type="module" src="./src/main.tsx"></script>
+  </body>
+</html>
