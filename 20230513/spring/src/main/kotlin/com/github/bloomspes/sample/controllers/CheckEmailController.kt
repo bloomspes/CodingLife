@@ -34,12 +34,12 @@ class CheckEmailController(
 
         if (isEmailDuplicated) {
             response.addHeader("X-Email-Duplicate", "true")
-            response.sendError(HttpServletResponse.SC_CONFLICT)
+            response.status
         }
 
         if (!isEmailDuplicated) {
             response.addHeader("X-Email-Duplicate", "false")
-            response.status
+            response.sendError(HttpServletResponse.SC_NOT_FOUND)
         }
     }
 
@@ -54,14 +54,14 @@ class CheckEmailController(
         if (isEmailDuplicated) {
             responseHeaders.set("X-Email-Duplicate", "true")
 
-            return ResponseEntity.status(HttpStatus.CONFLICT)
+            return ResponseEntity.status(HttpStatus.OK)
                 .headers(responseHeaders)
                 .body("This email is not available")
         }
 
         responseHeaders.set("X-Email-Duplicate", "false")
 
-        return ResponseEntity.ok()
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
             .headers(responseHeaders)
             .body("This email is available")
     }

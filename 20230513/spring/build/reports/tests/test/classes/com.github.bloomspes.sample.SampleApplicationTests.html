@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.105s</div>
+<div class="counter">0.001s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">contextLoads()</td>
-<td class="success">0.105s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,12 +87,7 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>20:09:58.084 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Neither @ContextConfiguration nor @ContextHierarchy found for test class [SampleApplicationTests]: using SpringBootContextLoader
-20:09:58.087 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader -- Could not detect default resource locations for test class [com.github.bloomspes.sample.SampleApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-20:09:58.235 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using ContextCustomizers for test class [SampleApplicationTests]: [MockkContextCustomizer, DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
-20:09:58.279 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using TestExecutionListeners for test class [SampleApplicationTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockkTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, ClearMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
-20:09:58.279 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener -- Before test class: class [SampleApplicationTests], class annotated with @DirtiesContext [false] with mode [null]
-
+<pre>
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -101,20 +96,20 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.6)
 
-2023-05-14T20:09:58.409+09:00  INFO 48408 --- [    Test worker] c.g.b.sample.SampleApplicationTests      : Starting SampleApplicationTests using Java 17.0.4.1 with PID 48408 (started by spes in /Volumes/Dev/CodingLife/20230513/spring)
-2023-05-14T20:09:58.410+09:00  INFO 48408 --- [    Test worker] c.g.b.sample.SampleApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2023-05-14T20:09:58.614+09:00  INFO 48408 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-05-14T20:09:58.636+09:00  INFO 48408 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interfaces.
-2023-05-14T20:09:58.774+09:00  INFO 48408 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-05-14T20:09:58.875+09:00  INFO 48408 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@660296d5
-2023-05-14T20:09:58.876+09:00  INFO 48408 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-05-14T20:09:58.895+09:00  INFO 48408 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-05-14T20:09:58.912+09:00  INFO 48408 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-05-14T20:09:59.029+09:00  INFO 48408 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-05-14T20:09:59.308+09:00  INFO 48408 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-05-14T20:09:59.312+09:00  INFO 48408 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-05-14T20:09:59.592+09:00  WARN 48408 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-05-14T20:09:59.718+09:00  INFO 48408 --- [    Test worker] c.g.b.sample.SampleApplicationTests      : Started SampleApplicationTests in 1.425 seconds (process running for 1.982)
+2023-05-14T20:24:49.737+09:00  INFO 49550 --- [    Test worker] c.g.b.sample.SampleApplicationTests      : Starting SampleApplicationTests using Java 17.0.4.1 with PID 49550 (started by spes in /Volumes/Dev/CodingLife/20230513/spring)
+2023-05-14T20:24:49.737+09:00  INFO 49550 --- [    Test worker] c.g.b.sample.SampleApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-05-14T20:24:49.841+09:00  INFO 49550 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-14T20:24:49.858+09:00  INFO 49550 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interfaces.
+2023-05-14T20:24:49.938+09:00  INFO 49550 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-14T20:24:50.041+09:00  INFO 49550 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5e643402
+2023-05-14T20:24:50.042+09:00  INFO 49550 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-14T20:24:50.066+09:00  INFO 49550 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-14T20:24:50.084+09:00  INFO 49550 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-14T20:24:50.160+09:00  INFO 49550 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-14T20:24:50.382+09:00  INFO 49550 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-14T20:24:50.386+09:00  INFO 49550 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-14T20:24:50.639+09:00  WARN 49550 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-14T20:24:50.708+09:00  INFO 49550 --- [    Test worker] c.g.b.sample.SampleApplicationTests      : Started SampleApplicationTests in 0.983 seconds (process running for 2.581)
 </pre>
 </span>
 </div>
@@ -126,7 +121,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.6.1</a> at May 14, 2023, 8:10:00 PM</p>
+<a href="http://www.gradle.org">Gradle 7.6.1</a> at May 14, 2023, 8:24:50 PM</p>
 </div>
 </div>
 </body>

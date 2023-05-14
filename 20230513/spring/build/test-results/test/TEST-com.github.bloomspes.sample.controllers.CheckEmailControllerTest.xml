@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.github.bloomspes.sample.controllers.CheckEmailControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-05-14T11:10:00" hostname="imseulgis-MacBook-Air.local" time="0.086">
+<testsuite name="com.github.bloomspes.sample.controllers.CheckEmailControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-05-14T11:24:49" hostname="imseulgis-MacBook-Air.local" time="0.16">
   <properties/>
-  <testcase name="GET /users?email={email}" classname="com.github.bloomspes.sample.controllers.CheckEmailControllerTest" time="0.075"/>
-  <testcase name="GET /users/http-servlet-response?email={email}" classname="com.github.bloomspes.sample.controllers.CheckEmailControllerTest" time="0.004"/>
-  <testcase name="GET /users/response-entity?email={email}" classname="com.github.bloomspes.sample.controllers.CheckEmailControllerTest" time="0.005"/>
-  <system-out><![CDATA[2023-05-14T20:09:59.834+09:00  INFO 48408 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.github.bloomspes.sample.controllers.CheckEmailControllerTest]: CheckEmailControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-05-14T20:09:59.842+09:00  INFO 48408 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.github.bloomspes.sample.SampleApplication for test class com.github.bloomspes.sample.controllers.CheckEmailControllerTest
+  <testcase name="GET /users?email={email}" classname="com.github.bloomspes.sample.controllers.CheckEmailControllerTest" time="0.147"/>
+  <testcase name="GET /users/http-servlet-response?email={email}" classname="com.github.bloomspes.sample.controllers.CheckEmailControllerTest" time="0.005"/>
+  <testcase name="GET /users/response-entity?email={email}" classname="com.github.bloomspes.sample.controllers.CheckEmailControllerTest" time="0.004"/>
+  <system-out><![CDATA[20:24:48.462 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper -- Neither @ContextConfiguration nor @ContextHierarchy found for test class [CheckEmailControllerTest]: using SpringBootContextLoader
+20:24:48.465 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader -- Could not detect default resource locations for test class [com.github.bloomspes.sample.controllers.CheckEmailControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+20:24:48.465 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.github.bloomspes.sample.controllers.CheckEmailControllerTest]: CheckEmailControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:24:48.594 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper -- Using ContextCustomizers for test class [CheckEmailControllerTest]: [MockkContextCustomizer, DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, Customizer, ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer]
+20:24:48.624 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider -- Identified candidate component class: file [/Volumes/Dev/CodingLife/20230513/spring/build/classes/kotlin/main/com/github/bloomspes/sample/SampleApplication.class]
+20:24:48.625 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.github.bloomspes.sample.SampleApplication for test class com.github.bloomspes.sample.controllers.CheckEmailControllerTest
+20:24:48.633 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper -- Using TestExecutionListeners for test class [CheckEmailControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockkTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, ClearMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+20:24:48.634 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener -- Before test class: class [CheckEmailControllerTest], class annotated with @DirtiesContext [false] with mode [null]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -15,12 +21,12 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.6)
 
-2023-05-14T20:09:59.853+09:00  INFO 48408 --- [    Test worker] c.g.b.s.c.CheckEmailControllerTest       : Starting CheckEmailControllerTest using Java 17.0.4.1 with PID 48408 (started by spes in /Volumes/Dev/CodingLife/20230513/spring)
-2023-05-14T20:09:59.854+09:00  INFO 48408 --- [    Test worker] c.g.b.s.c.CheckEmailControllerTest       : No active profile set, falling back to 1 default profile: "default"
-2023-05-14T20:10:00.291+09:00  INFO 48408 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-05-14T20:10:00.291+09:00  INFO 48408 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-05-14T20:10:00.295+09:00  INFO 48408 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2023-05-14T20:10:00.301+09:00  INFO 48408 --- [    Test worker] c.g.b.s.c.CheckEmailControllerTest       : Started CheckEmailControllerTest in 0.455 seconds (process running for 2.566)
+2023-05-14T20:24:48.795+09:00  INFO 49550 --- [    Test worker] c.g.b.s.c.CheckEmailControllerTest       : Starting CheckEmailControllerTest using Java 17.0.4.1 with PID 49550 (started by spes in /Volumes/Dev/CodingLife/20230513/spring)
+2023-05-14T20:24:48.796+09:00  INFO 49550 --- [    Test worker] c.g.b.s.c.CheckEmailControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2023-05-14T20:24:49.536+09:00  INFO 49550 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-05-14T20:24:49.536+09:00  INFO 49550 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-14T20:24:49.538+09:00  INFO 49550 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-05-14T20:24:49.550+09:00  INFO 49550 --- [    Test worker] c.g.b.s.c.CheckEmailControllerTest       : Started CheckEmailControllerTest in 0.873 seconds (process running for 1.423)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.github.bloomspes.sample.controllers.UserControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-14T11:10:00" hostname="imseulgis-MacBook-Air.local" time="0.046">
+<testsuite name="com.github.bloomspes.sample.controllers.UserControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-14T11:24:50" hostname="imseulgis-MacBook-Air.local" time="0.04">
   <properties/>
-  <testcase name="POST /users" classname="com.github.bloomspes.sample.controllers.UserControllerTest" time="0.046"/>
-  <system-out><![CDATA[2023-05-14T20:10:00.399+09:00  INFO 48408 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.github.bloomspes.sample.controllers.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-05-14T20:10:00.402+09:00  INFO 48408 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.github.bloomspes.sample.SampleApplication for test class com.github.bloomspes.sample.controllers.UserControllerTest
+  <testcase name="POST /users" classname="com.github.bloomspes.sample.controllers.UserControllerTest" time="0.04"/>
+  <system-out><![CDATA[2023-05-14T20:24:50.713+09:00  INFO 49550 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.github.bloomspes.sample.controllers.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-14T20:24:50.715+09:00  INFO 49550 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.github.bloomspes.sample.SampleApplication for test class com.github.bloomspes.sample.controllers.UserControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,12 +13,12 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.6)
 
-2023-05-14T20:10:00.423+09:00  INFO 48408 --- [    Test worker] c.g.b.s.controllers.UserControllerTest   : Starting UserControllerTest using Java 17.0.4.1 with PID 48408 (started by spes in /Volumes/Dev/CodingLife/20230513/spring)
-2023-05-14T20:10:00.424+09:00  INFO 48408 --- [    Test worker] c.g.b.s.controllers.UserControllerTest   : No active profile set, falling back to 1 default profile: "default"
-2023-05-14T20:10:00.557+09:00  INFO 48408 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-05-14T20:10:00.558+09:00  INFO 48408 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-05-14T20:10:00.558+09:00  INFO 48408 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2023-05-14T20:10:00.562+09:00  INFO 48408 --- [    Test worker] c.g.b.s.controllers.UserControllerTest   : Started UserControllerTest in 0.156 seconds (process running for 2.826)
+2023-05-14T20:24:50.724+09:00  INFO 49550 --- [    Test worker] c.g.b.s.controllers.UserControllerTest   : Starting UserControllerTest using Java 17.0.4.1 with PID 49550 (started by spes in /Volumes/Dev/CodingLife/20230513/spring)
+2023-05-14T20:24:50.724+09:00  INFO 49550 --- [    Test worker] c.g.b.s.controllers.UserControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2023-05-14T20:24:50.803+09:00  INFO 49550 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-05-14T20:24:50.803+09:00  INFO 49550 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-14T20:24:50.803+09:00  INFO 49550 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-05-14T20:24:50.806+09:00  INFO 49550 --- [    Test worker] c.g.b.s.controllers.UserControllerTest   : Started UserControllerTest in 0.088 seconds (process running for 2.678)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

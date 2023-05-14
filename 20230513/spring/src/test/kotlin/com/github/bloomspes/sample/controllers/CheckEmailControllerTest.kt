@@ -29,7 +29,7 @@ internal class CheckEmailControllerTest {
 
         mockMvc.perform(
             MockMvcRequestBuilders.get("/users")
-                .param("email", "tester@example.com")
+                .param("email", "tester1@example.com")
                 .accept(MediaType.APPLICATION_JSON)
                 .header("X-Email-Duplicate", "false")
         )
@@ -47,23 +47,24 @@ internal class CheckEmailControllerTest {
                 .accept(MediaType.APPLICATION_JSON)
                 .header("X-Email-Duplicate", "true")
         )
-            .andExpect(MockMvcResultMatchers.status().isConflict)
+            .andExpect(MockMvcResultMatchers.status().isOk)
     }
 
     @Test
     @DisplayName("GET /users/response-entity?email={email}")
     fun checkEmailUsingResponseEntity() {
-        every { checkEmailService.checkEmailExisting(any()) } returns true
+        every { checkEmailService.checkEmailExisting(any()) } returns false
 
         val responseHeaders = HttpHeaders()
-        responseHeaders.set("X-Email-Duplicate", "true")
+        responseHeaders.set("X-Email-Duplicate", "false")
 
         mockMvc.perform(
             MockMvcRequestBuilders.get("/users/response-entity")
-                .param("email", "tester@example.com")
+                .param("email", "tester1@example.com")
                 .accept(MediaType.APPLICATION_JSON)
                 .headers(responseHeaders)
+                .content("This email is available")
         )
-            .andExpect(MockMvcResultMatchers.status().isConflict)
+            .andExpect(MockMvcResultMatchers.status().isNotFound)
     }
 }
