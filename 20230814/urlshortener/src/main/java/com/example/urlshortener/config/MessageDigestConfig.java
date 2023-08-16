@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class MessageDigestConfig {
-
     @Bean
     public MessageDigest messageDigest() throws NoSuchAlgorithmException {
         return MessageDigest.getInstance("SHA-256");
