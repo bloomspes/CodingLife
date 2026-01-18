@@ -31,13 +31,19 @@
   - [ ] 데스크톱(넓은 화면)에서는 전체 영역을 중앙에 배치하고, 텍스트와 달력의 좌우 여백을 맞춰 시각적으로 균형 있게 정렬한다.
 
 ## 단계 0: 초기 셋업
-- [x] `pnpm` + Vite(React + TypeScript 템플릿)에 대응하는 기본 프로젝트 구조 파일을 생성한다(`package.json`, Vite 설정 등).
-- [x] Tailwind CSS, PostCSS, Autoprefixer 패키지 설치(를 위한 설정/구성 파일 추가)
-- [x] Tailwind 설정 파일(`tailwind.config.js`, `postcss.config.js`) 생성
-- [x] `index.html`에 Tailwind 엔트리 CSS 연결(스크립트와 루트 엘리먼트 포함)
+- [x] `pnpm` + Vite(React + TypeScript 템플릿)에 대응하는 기본
+  프로젝트 구조 파일을 생성한다(`package.json`, Vite 설정 등).
+- [x] Tailwind CSS, PostCSS, Autoprefixer 패키지 설치(를 위한
+  설정/구성 파일 추가)
+- [x] Tailwind 설정 파일(`tailwind.config.js`, `postcss.config.js`)
+  생성
+- [x] `index.html`에 Tailwind 엔트리 CSS 연결(스크립트와 루트
+  엘리먼트 포함)
 - [x] `src/main.tsx`에서 ReactDOM 렌더링 코드 생성
-- [x] `README.md` 파일 생성: 프로젝트 한 줄 소개와 “초기 셋업 단계” 메모 작성
-- [ ] `pnpm dev` 실행 후, 빈 페이지가 정상 렌더되는지 확인
+- [x] `README.md` 파일 생성: 프로젝트 한 줄 소개와 “초기 셋업 단계”
+  메모 작성
+- [x] `pnpm dev` 실행 후, 브라우저에서 기본 화면이 정상 렌더되는지
+  확인
 
 ## 단계 1: TanStack Router 기본 라우트
 - [ ] `@tanstack/react-router` 패키지 설치
