@@ -23,6 +23,20 @@ function HomePage() {
             오늘 날짜를 보여주는 캘린더
           </p>
         </header>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <button
+            type="button"
+            className="rounded-full border border-slate-700 px-4 py-2 text-sm text-slate-200"
+          >
+            이전 달
+          </button>
+          <button
+            type="button"
+            className="rounded-full border border-slate-700 px-4 py-2 text-sm text-slate-200"
+          >
+            다음 달
+          </button>
+        </div>
         <MonthGrid days={days} startWeekday={startWeekday} today={todayDate.getDate()} />
       </div>
     </main>
