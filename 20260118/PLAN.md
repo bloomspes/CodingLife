@@ -63,7 +63,7 @@
 - [x] `src/routes/__root.tsx` 파일 생성
 - [x] `src/routes/index.tsx` 파일 생성
 - [x] `src/main.tsx`에 Router Provider 연결
-- [ ] 브라우저에서 기본 라우트가 렌더되는지 확인
+- [x] 브라우저에서 기본 라우트가 렌더되는지 확인
 
 ## 단계 2: 오늘 날짜 텍스트 기능
 
