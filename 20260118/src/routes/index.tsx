@@ -1,6 +1,7 @@
 import React from "react";
 import { createRoute } from "@tanstack/react-router";
 import { rootRoute } from "./__root";
+import React, { useMemo, useState } from "react";
 import { formatKoreanDate, getTodayDate } from "../lib/getToday";
 import { MonthGrid } from "../components/MonthGrid";
 import { getMonthDays, getMonthStartWeekday } from "../lib/getMonthDays";
@@ -8,10 +9,35 @@ import { getMonthDays, getMonthStartWeekday } from "../lib/getMonthDays";
 function HomePage() {
   const todayDate = getTodayDate();
   const todayText = formatKoreanDate(todayDate);
-  const year = todayDate.getFullYear();
-  const month = todayDate.getMonth() + 1;
-  const days = getMonthDays(year, month);
-  const startWeekday = getMonthStartWeekday(year, month);
+  const [currentYear, setCurrentYear] = useState(todayDate.getFullYear());
+  const [currentMonth, setCurrentMonth] = useState(todayDate.getMonth() + 1);
+  const { days, startWeekday } = useMemo(() => {
+    return {
+      days: getMonthDays(currentYear, currentMonth),
+      startWeekday: getMonthStartWeekday(currentYear, currentMonth),
+    };
+  }, [currentYear, currentMonth]);
+  const todayInCurrentMonth =
+    currentYear === todayDate.getFullYear() &&
+    currentMonth === todayDate.getMonth() + 1
+      ? todayDate.getDate()
+      : null;
+  const handlePrevMonth = () => {
+    if (currentMonth === 1) {
+      setCurrentYear((value) => value - 1);
+      setCurrentMonth(12);
+      return;
+    }
+    setCurrentMonth((value) => value - 1);
+  };
+  const handleNextMonth = () => {
+    if (currentMonth === 12) {
+      setCurrentYear((value) => value + 1);
+      setCurrentMonth(1);
+      return;
+    }
+    setCurrentMonth((value) => value + 1);
+  };
 
   return (
     <main className="flex min-h-screen items-center justify-center bg-slate-950 text-slate-100">
@@ -27,17 +53,23 @@ function HomePage() {
           <button
             type="button"
             className="rounded-full border border-slate-700 px-4 py-2 text-sm text-slate-200"
+            onClick={handlePrevMonth}
           >
             이전 달
           </button>
           <button
             type="button"
             className="rounded-full border border-slate-700 px-4 py-2 text-sm text-slate-200"
+            onClick={handleNextMonth}
           >
             다음 달
           </button>
         </div>
-        <MonthGrid days={days} startWeekday={startWeekday} today={todayDate.getDate()} />
+        <MonthGrid
+          days={days}
+          startWeekday={startWeekday}
+          today={todayInCurrentMonth}
+        />
       </div>
     </main>
   );
