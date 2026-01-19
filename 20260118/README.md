@@ -2,10 +2,9 @@
 
 오늘 날짜를 분명하게 보여주는 작은 웹 캘린더 앱입니다.
 
-현재 상태: Vite + React + TypeScript + Tailwind CSS 기본 구조와
-엔트리 파일까지 생성된 상태입니다.
-AGENTS.md와 PLAN.md에 정리된 내용에 따라, React + TypeScript +
-Tailwind CSS + TanStack Router + pnpm 스택으로 구현합니다.
+현재 상태: Vite + React + TypeScript + Tailwind CSS + TanStack Router 진입점을
+구성한 상태입니다. AGENTS.md와 PLAN.md에 정리된 순서대로 기능을 차례대로
+구현 중입니다.
 
 ## 실행 방법
 
@@ -34,11 +33,11 @@ pnpm install
 pnpm dev
 ```
 
-터미널에 표시되는 주소(기본값: `http://localhost:5173`)를 브라우저에서 연다.
+터미널에 표시되는 주소(기본값: `http://localhost:5173`)를
+브라우저에서 연다.
 
-## 앞으로 들어갈 내용 (초안)
-- 사용 기술 스택 요약
-- 설치 및 실행 방법
-- 제공하는 기능 목록
+## 제공 기능
+
+- TanStack Router 루트 라우트와 홈 진입점 구성
 
 기능을 하나 구현할 때마다 이 README를 함께 업데이트합니다.
