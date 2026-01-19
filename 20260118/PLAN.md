@@ -76,7 +76,6 @@
 
 ## 단계 3: 달력 뷰와 오늘 강조
 
-- [ ] 한 달 날짜 목록 유틸 함수 파일 생성 (예: `src/lib/getMonthDays.ts`)
 - [x] 한 달 날짜 목록 유틸 함수 파일 생성 (예: `src/lib/getMonthDays.ts`)
 - [x] 현재 연·월을 기준으로 날짜 배열 생성
 - [x] 7열 그리드 달력 컴포넌트 파일 생성 (예: `src/components/MonthGrid.tsx`)
