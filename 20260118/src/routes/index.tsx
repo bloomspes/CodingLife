@@ -46,8 +46,13 @@ function HomePage() {
           <p className="mt-2 text-base text-slate-300">
             {currentYear}년 {currentMonth}월
           </p>
-          <p className="mt-2 text-base text-slate-100">{todayText}</p>
         </header>
+        <div className="flex items-center justify-center">
+          <div className="rounded-2xl border border-slate-700 bg-slate-950/60 px-6 py-4">
+            <p className="text-sm font-semibold text-slate-400">오늘 날짜</p>
+            <p className="mt-1 text-xl font-semibold text-white">{todayText}</p>
+          </div>
+        </div>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <button
             type="button"
