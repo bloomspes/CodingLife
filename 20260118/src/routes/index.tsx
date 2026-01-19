@@ -47,9 +47,6 @@ function HomePage() {
             {currentYear}년 {currentMonth}월
           </p>
           <p className="mt-2 text-base text-slate-100">{todayText}</p>
-          <p className="mt-3 text-sm text-slate-300">
-            오늘 날짜를 보여주는 캘린더
-          </p>
         </header>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <button
