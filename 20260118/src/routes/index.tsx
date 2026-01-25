@@ -37,6 +37,10 @@ function HomePage() {
     }
     setCurrentMonth((value) => value + 1);
   };
+  const handleGoToday = () => {
+    setCurrentYear(todayDate.getFullYear());
+    setCurrentMonth(todayDate.getMonth() + 1);
+  };
 
   return (
     <main className="flex min-h-screen items-center justify-center bg-slate-950 text-slate-100">
@@ -71,6 +75,7 @@ function HomePage() {
           <button
             type="button"
             className="rounded-full border border-slate-700 px-3 py-1.5 text-xs text-slate-200"
+            onClick={handleGoToday}
           >
             오늘로
           </button>
