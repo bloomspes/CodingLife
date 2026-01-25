@@ -47,6 +47,9 @@ function HomePage() {
       <div className="flex w-full max-w-2xl flex-col gap-6 rounded-3xl bg-slate-900/40 px-8 py-6 text-center shadow-lg shadow-slate-900/80">
         <header>
           <h1 className="text-3xl font-semibold text-white">오늘 날짜 캘린더</h1>
+          <p className="mt-2 text-sm text-slate-400">
+            오늘 날짜를 보여주는 캘린더
+          </p>
         </header>
         <div className="flex items-center justify-center">
           <div className="rounded-2xl border border-slate-700 bg-slate-950/60 px-6 py-4">
