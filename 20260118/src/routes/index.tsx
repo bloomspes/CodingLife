@@ -50,7 +50,7 @@ function HomePage() {
             <p className="mt-1 text-xl font-semibold text-white">{todayText}</p>
           </div>
         </div>
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex flex-wrap items-center justify-center gap-3">
           <button
             type="button"
             className="rounded-full border border-slate-700 px-3 py-1.5 text-xs text-slate-200"
@@ -67,6 +67,12 @@ function HomePage() {
             onClick={handleNextMonth}
           >
             다음 달
+          </button>
+          <button
+            type="button"
+            className="rounded-full border border-slate-700 px-3 py-1.5 text-xs text-slate-200"
+          >
+            오늘로
           </button>
         </div>
         <MonthGrid
