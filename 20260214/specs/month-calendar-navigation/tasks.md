@@ -19,7 +19,7 @@ Outside-in + TDD로 월간 달력 기본 표시와 월 이동/오늘 이동 기�
 ### Phase 2: Planning & Structure 🔄
 
 - [x] 구현 계획 작성 (plan.md)
-- [ ] 테스트 기준(ATDD 관점)을 plan에 반영했는지 재확인
+- [x] 테스트 기준(ATDD 관점)을 plan에 반영했는지 재확인
 - [ ] 초기 컴포넌트/유틸 파일 구조 확정
 
 ### Phase 3: Implementation ⏸️

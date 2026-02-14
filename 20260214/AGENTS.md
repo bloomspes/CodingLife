@@ -31,4 +31,5 @@
 
 - TypeScript, React, Tailwind, Vite
 - 패키지 매니저: pnpm
+- 테스트: Vitest + React Testing Library
 - Node.js 버전은 `.nvmrc`로 고정

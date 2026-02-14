@@ -23,8 +23,7 @@
 
 ### 문서
 
-- [File-based Planning Workflow]
-  (https://github.com/ahastudio/file-based-planning-workflow)
+- [File-based Planning Workflow](https://github.com/ahastudio/file-based-planning-workflow)
 
 ### 코드 참조
 
@@ -70,3 +69,8 @@ spec에서 API 없이 클라이언트만으로 구현하는 기능임을 명시�
 
 Outside-in 순서와 TDD 흐름을 plan에 반영하고, tasks/progress 작성 단계에
 진입했다.
+
+### UI 규칙 확정 (2026-02-14)
+
+주 시작 요일은 일요일로 고정하고, 오늘 버튼은 상단 오른쪽에 "오늘" 라벨로
+배치하기로 결정했다.
