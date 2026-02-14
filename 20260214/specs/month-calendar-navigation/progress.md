@@ -36,9 +36,17 @@
 - `src/test/setup.ts` (Testing Library 초기 설정)
 - `.nvmrc` (Node 버전 고정)
 
-### Phase 3: Implementation ⏸️
+### Phase 3: Implementation 🔄
 
-아직 시작 안 함
+**작업 내역**:
+
+1. App에서 MonthCalendar 연결 (Outside-in 첫 단계).
+
+**생성/수정 파일**:
+
+- `src/App.tsx` (MonthCalendar 연결)
+- `src/components/MonthCalendar.tsx` (초기 뼈대 추가)
+- `src/App.test.tsx` (App 렌더링 테스트 추가)
 
 ### Phase 4: Testing ⏸️
 
@@ -46,15 +54,15 @@
 
 ## Test Results
 
-| Test             | Input | Expected | Actual                       | Status |
-| ---------------- | ----- | -------- | ---------------------------- | ------ |
-| 달력 렌더링/이동 | -     | Pass     | No test files found (exit 1) | ❌     |
+| Test             | Input | Expected | Actual           | Status |
+| ---------------- | ----- | -------- | ---------------- | ------ |
+| 달력 렌더링/이동 | -     | Pass     | All tests passed | ✅     |
 
 ## Error Log
 
-| Timestamp  | Error                               | Attempt | Resolution |
-| ---------- | ----------------------------------- | ------- | ---------- |
-| 2026-02-14 | No test files found (vitest exit 1) | 3       | 미해결     |
+| Timestamp | Error | Attempt | Resolution |
+| --------- | ----- | ------- | ---------- |
+| -         | -     | -       | -          |
 
 ## 5-Question Reboot Check
 

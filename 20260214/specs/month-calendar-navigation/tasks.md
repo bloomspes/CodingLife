@@ -24,7 +24,7 @@ Outside-in + TDD로 월간 달력 기본 표시와 월 이동/오늘 이동 기�
 
 ### Phase 3: Implementation ⏸️
 
-- [ ] App에서 MonthCalendar 연결 (Red/Green/Refactor)
+- [x] App에서 MonthCalendar 연결 (Red/Green/Refactor)
 - [ ] MonthCalendar 기본 렌더 (Red/Green/Refactor)
 - [ ] CalendarHeader 버튼 동작 (Red/Green/Refactor)
 - [ ] CalendarGrid 달력 그리드 (Red/Green/Refactor)

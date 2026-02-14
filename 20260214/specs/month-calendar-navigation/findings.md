@@ -84,3 +84,7 @@ Vite + React + TypeScript + Tailwind + Vitest/RTL + Prettier를 기본 툴체인
 
 주 시작 요일은 일요일로 고정하고, 오늘 버튼은 상단 오른쪽에 "오늘" 라벨로
 배치하기로 결정했다.
+
+### Outside-in 첫 연결 (2026-02-14)
+
+App에서 MonthCalendar를 먼저 연결해 사용자 진입점을 확보했다.
