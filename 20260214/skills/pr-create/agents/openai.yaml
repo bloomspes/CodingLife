@@ -1,0 +1,7 @@
+interface:
+  display_name: "PR Create"
+  short_description: "Create GitHub PR title and body from repo context"
+  default_prompt:
+    "Create or update a GitHub PR title and body in Korean using honorifics. Use
+    sentence-per-line paragraphs with action plus reason flow, and avoid
+    headings or bullet lists unless requested."
