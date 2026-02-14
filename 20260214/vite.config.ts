@@ -9,6 +9,8 @@ export default defineConfig({
     environment: "jsdom",
     globals: true,
     setupFiles: "./src/test/setup.ts",
+    include: ["src/**/*.test.{ts,tsx}", "tests/units/**/*.test.{ts,tsx}"],
+    exclude: ["tests/e2e/**"],
   },
   server: {
     host: "127.0.0.1",

@@ -46,6 +46,7 @@
 4. CalendarGrid 컴포넌트 분리.
 5. 달력 계산 유틸 분리 (월 라벨, 이동, 그리드 생성).
 6. 접근성과 SEO를 위해 문서 언어 설정을 한국어로 변경.
+7. 테스트 디렉터리를 units/e2e로 분리하고 Vitest 제외 설정 추가.
 
 **생성/수정 파일**:
 
@@ -60,6 +61,8 @@
 - `src/lib/date.ts` (날짜 유틸)
 - `src/lib/__tests__/calendar.test.ts` (달력 유틸 테스트)
 - `index.html` (lang 속성 ko로 변경)
+- `vite.config.ts` (Vitest include/exclude 설정)
+- `tests/units/.gitkeep` (units 디렉터리 유지)
 
 ### Phase 4: Testing ✅
 
@@ -78,13 +81,13 @@
 
 ## Test Results
 
-| Test                      | Input | Expected | Actual                            | Status |
-| ------------------------- | ----- | -------- | --------------------------------- | ------ |
-| 달력 렌더링/이동          | -     | Pass     | Pass (Vitest 6 tests)             | ✅     |
-| 달력 유틸                 | -     | Pass     | Pass (Vitest 3 tests)             | ✅     |
-| 전체 테스트               | -     | Pass     | Pass (Vitest 9 tests)             | ✅     |
-| 수동 테스트 시나리오(E2E) | -     | Pass     | Pass (Playwright 3 tests x3 runs) | ✅     |
-| 전체 빌드                 | -     | Pass     | Pass (Vite build succeeded)       | ✅     |
+| Test                      | Input | Expected | Actual                                      | Status |
+| ------------------------- | ----- | -------- | ------------------------------------------- | ------ |
+| 달력 렌더링/이동          | -     | Pass     | Pass (Vitest 6 tests)                       | ✅     |
+| 달력 유틸                 | -     | Pass     | Pass (Vitest 3 tests)                       | ✅     |
+| 전체 테스트               | -     | Pass     | Pass (Vitest 9 tests, npm test)             | ✅     |
+| 수동 테스트 시나리오(E2E) | -     | Pass     | Pass (Playwright 3 tests, npm run test:e2e) | ✅     |
+| 전체 빌드                 | -     | Pass     | Pass (Vite build succeeded)                 | ✅     |
 
 ## Error Log
 
