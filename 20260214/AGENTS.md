@@ -1,4 +1,4 @@
-# File-Based Planning Workflow
+# AGENTS
 
 이 프로젝트는 File-based Planning Workflow를 따른다.
 
@@ -19,8 +19,16 @@
 - findings는 사실상 MEMORY에 가까운 기록
 - 문서 업데이트, 검토, 동기화, 검토를 매번 자주 실행하고 prettier도 항상
   자동으로 실행
+- 개발은 항상 Outside-in 순서로 진행
+- TDD를 무조건 적용
 - 기능 개발 시작 시 `specs/` 아래 기능 이름을 반영한 적절한 kebab-case 폴더를
   만들고 그 안에 6개 템플릿 파일을 그대로 복사한 뒤 해당 폴더의 `README.md`부터
   작성 시작
 - 커밋도 자주 수행
 - 사고 과정을 끊임없이 기록
+
+## 기술 스택
+
+- TypeScript, React, Tailwind, Vite
+- 패키지 매니저: pnpm
+- Node.js 버전은 `.nvmrc`로 고정
