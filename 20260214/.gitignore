@@ -24,3 +24,6 @@ playwright-report/
 *.njsproj
 *.sln
 *.sw?
+
+# Claude Code
+.claude/settings.local.json

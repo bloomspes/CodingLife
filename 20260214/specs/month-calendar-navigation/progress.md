@@ -80,6 +80,22 @@
 - `vite.config.ts` (dev 서버 포트 고정)
 - `package.json` (E2E 스크립트 추가)
 
+## Session 2026-02-15
+
+### 코드/스펙 검증 및 환경 수정 ✅
+
+**작업 내역**:
+
+1. 스펙 문서와 코드 정합성 검증.
+2. jsdom 28 ESM 호환성 이슈 해결 (happy-dom으로 교체).
+3. findings.md에 이슈 및 결정 사항 기록.
+
+**생성/수정 파일**:
+
+- `package.json` (jsdom 제거, happy-dom 추가)
+- `vite.config.ts` (테스트 환경 jsdom → happy-dom 변경)
+- `specs/month-calendar-navigation/findings.md` (이슈 3번 추가, 학습 사항 추가)
+
 ## Test Results
 
 | Test         | Input | Expected | Actual                                      | Status |
@@ -102,6 +118,8 @@
 | 2026-02-14 | Vite build 타입 오류 (test config)  | 1       | 해결됨 (vitest/config 사용)  |
 | 2026-02-14 | MonthCalendar 기본 렌더 테스트 실패 | 1       | 해결됨 (MonthCalendar 구현)  |
 | 2026-02-14 | Playwright webServer 대기 지연      | 1       | 해결됨 (dev 서버 포트 고정)  |
+| 2026-02-15 | jsdom 28 ESM 호환성 오류            | 1       | 해결됨 (happy-dom으로 교체)  |
+| 2026-02-15 | Playwright 브라우저 미설치          | 1       | 해결됨 (playwright install)  |
 
 ## 5-Question Reboot Check
 
