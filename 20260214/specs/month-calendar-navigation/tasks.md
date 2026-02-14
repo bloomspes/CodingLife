@@ -6,7 +6,7 @@ Outside-in + TDD로 월간 달력 기본 표시와 월 이동/오늘 이동 기�
 
 ## Current Phase
 
-🔄 Phase 2: Planning & Structure
+🔄 Phase 3: Implementation
 
 ## Phases
 
@@ -16,16 +16,16 @@ Outside-in + TDD로 월간 달력 기본 표시와 월 이동/오늘 이동 기�
 - [x] 스펙 문서 작성 (spec.md)
 - [x] 스펙 리뷰 및 승인
 
-### Phase 2: Planning & Structure 🔄
+### Phase 2: Planning & Structure ✅
 
 - [x] 구현 계획 작성 (plan.md)
 - [x] 테스트 기준(ATDD 관점)을 plan에 반영했는지 재확인
 - [x] 프로젝트 초기 설정 (Vite/TS/Tailwind/Vitest/Prettier)
 
-### Phase 3: Implementation ⏸️
+### Phase 3: Implementation 🔄
 
 - [x] App에서 MonthCalendar 연결 (Red/Green/Refactor)
-- [ ] MonthCalendar 기본 렌더 (Red/Green/Refactor)
+- [x] MonthCalendar 기본 렌더 (Red/Green/Refactor)
 - [ ] CalendarHeader 버튼 동작 (Red/Green/Refactor)
 - [ ] CalendarGrid 달력 그리드 (Red/Green/Refactor)
 - [ ] 달력 계산 유틸 (Red/Green/Refactor)

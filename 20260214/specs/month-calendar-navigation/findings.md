@@ -88,3 +88,7 @@ Vite + React + TypeScript + Tailwind + Vitest/RTL + Prettier를 기본 툴체인
 ### Outside-in 첫 연결 (2026-02-14)
 
 App에서 MonthCalendar를 먼저 연결해 사용자 진입점을 확보했다.
+
+### MonthCalendar 기본 렌더 완료 (2026-02-14)
+
+연월 표시, 요일 헤더, 오늘 강조가 포함된 기본 월간 그리드를 구성했다.

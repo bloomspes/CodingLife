@@ -41,12 +41,15 @@
 **작업 내역**:
 
 1. App에서 MonthCalendar 연결 (Outside-in 첫 단계).
+2. MonthCalendar 기본 렌더 (연월, 요일, 오늘 강조 표시).
 
 **생성/수정 파일**:
 
 - `src/App.tsx` (MonthCalendar 연결)
 - `src/components/MonthCalendar.tsx` (초기 뼈대 추가)
 - `src/App.test.tsx` (App 렌더링 테스트 추가)
+- `src/components/__tests__/MonthCalendar.test.tsx` (MonthCalendar 기본 렌더
+  테스트)
 
 ### Phase 4: Testing ⏸️
 
@@ -63,13 +66,14 @@
 | Timestamp  | Error                               | Attempt | Resolution                   |
 | ---------- | ----------------------------------- | ------- | ---------------------------- |
 | 2026-02-14 | No test files found (vitest exit 1) | 3       | 해결됨 (테스트 추가 후 통과) |
+| 2026-02-14 | MonthCalendar 기본 렌더 테스트 실패 | 1       | 해결됨 (MonthCalendar 구현)  |
 
 ## 5-Question Reboot Check
 
-| Question               | Answer                         |
-| ---------------------- | ------------------------------ |
-| 1. 현재 어느 단계인가? | Phase 2 (진행 중)              |
-| 2. 다음에 할 일은?     | Phase 2 마무리 후 Phase 3 시작 |
-| 3. 목표는?             | 월간 달력 기본 보기/이동 구현  |
-| 4. 지금까지 배운 것?   | findings.md 참고               |
-| 5. 완료한 작업은?      | 위 Phase 1/2 작업 내역 참고    |
+| Question               | Answer                        |
+| ---------------------- | ----------------------------- |
+| 1. 현재 어느 단계인가? | Phase 3 (진행 중)             |
+| 2. 다음에 할 일은?     | CalendarHeader 버튼 동작 구현 |
+| 3. 목표는?             | 월간 달력 기본 보기/이동 구현 |
+| 4. 지금까지 배운 것?   | findings.md 참고              |
+| 5. 완료한 작업은?      | 위 Phase 1/2 작업 내역 참고   |
