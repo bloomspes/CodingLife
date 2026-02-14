@@ -60,9 +60,9 @@
 
 ## Error Log
 
-| Timestamp | Error | Attempt | Resolution |
-| --------- | ----- | ------- | ---------- |
-| -         | -     | -       | -          |
+| Timestamp  | Error                               | Attempt | Resolution                   |
+| ---------- | ----------------------------------- | ------- | ---------------------------- |
+| 2026-02-14 | No test files found (vitest exit 1) | 3       | 해결됨 (테스트 추가 후 통과) |
 
 ## 5-Question Reboot Check
 
