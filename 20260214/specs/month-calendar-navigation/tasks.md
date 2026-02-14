@@ -29,6 +29,7 @@ Outside-in + TDD로 월간 달력 기본 표시와 월 이동/오늘 이동 기�
 - [x] CalendarHeader 버튼 동작 (Red/Green/Refactor)
 - [x] CalendarGrid 달력 그리드 (Red/Green/Refactor)
 - [x] 달력 계산 유틸 (Red/Green/Refactor)
+- [x] 문서 언어 설정을 한국어로 반영
 
 ### Phase 4: Testing ✅
 

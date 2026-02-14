@@ -45,6 +45,7 @@
 3. CalendarHeader 버튼 동작 (이전/다음/오늘 월 이동).
 4. CalendarGrid 컴포넌트 분리.
 5. 달력 계산 유틸 분리 (월 라벨, 이동, 그리드 생성).
+6. 접근성과 SEO를 위해 문서 언어 설정을 한국어로 변경.
 
 **생성/수정 파일**:
 
@@ -58,6 +59,7 @@
 - `src/lib/calendar.ts` (달력 계산 유틸)
 - `src/lib/date.ts` (날짜 유틸)
 - `src/lib/__tests__/calendar.test.ts` (달력 유틸 테스트)
+- `index.html` (lang 속성 ko로 변경)
 
 ### Phase 4: Testing ✅
 
@@ -76,23 +78,24 @@
 
 ## Test Results
 
-| Test                      | Input | Expected | Actual                      | Status |
-| ------------------------- | ----- | -------- | --------------------------- | ------ |
-| 달력 렌더링/이동          | -     | Pass     | Pass (Vitest 6 tests)       | ✅     |
-| 달력 유틸                 | -     | Pass     | Pass (Vitest 3 tests)       | ✅     |
-| 전체 테스트               | -     | Pass     | Pass (Vitest 9 tests)       | ✅     |
-| 수동 테스트 시나리오(E2E) | -     | Pass     | Pass (Playwright 3 tests)   | ✅     |
-| 전체 빌드                 | -     | Pass     | Pass (Vite build succeeded) | ✅     |
+| Test                      | Input | Expected | Actual                            | Status |
+| ------------------------- | ----- | -------- | --------------------------------- | ------ |
+| 달력 렌더링/이동          | -     | Pass     | Pass (Vitest 6 tests)             | ✅     |
+| 달력 유틸                 | -     | Pass     | Pass (Vitest 3 tests)             | ✅     |
+| 전체 테스트               | -     | Pass     | Pass (Vitest 9 tests)             | ✅     |
+| 수동 테스트 시나리오(E2E) | -     | Pass     | Pass (Playwright 3 tests x3 runs) | ✅     |
+| 전체 빌드                 | -     | Pass     | Pass (Vite build succeeded)       | ✅     |
 
 ## Error Log
 
-| Timestamp  | Error                               | Attempt | Resolution                   |
-| ---------- | ----------------------------------- | ------- | ---------------------------- |
-| 2026-02-14 | No test files found (vitest exit 1) | 3       | 해결됨 (테스트 추가 후 통과) |
-| 2026-02-14 | MonthCalendar 버튼 동작 테스트 실패 | 1       | 해결됨 (상태/핸들러 추가)    |
-| 2026-02-14 | Vite build 타입 오류 (test config)  | 1       | 해결됨 (vitest/config 사용)  |
-| 2026-02-14 | MonthCalendar 기본 렌더 테스트 실패 | 1       | 해결됨 (MonthCalendar 구현)  |
-| 2026-02-14 | Playwright webServer 대기 지연      | 1       | 해결됨 (dev 서버 포트 고정)  |
+| Timestamp  | Error                               | Attempt | Resolution                    |
+| ---------- | ----------------------------------- | ------- | ----------------------------- |
+| 2026-02-14 | vitest가 Playwright 스펙을 로드함   | 1       | 검증을 `pnpm test:e2e`로 수행 |
+| 2026-02-14 | No test files found (vitest exit 1) | 3       | 해결됨 (테스트 추가 후 통과)  |
+| 2026-02-14 | MonthCalendar 버튼 동작 테스트 실패 | 1       | 해결됨 (상태/핸들러 추가)     |
+| 2026-02-14 | Vite build 타입 오류 (test config)  | 1       | 해결됨 (vitest/config 사용)   |
+| 2026-02-14 | MonthCalendar 기본 렌더 테스트 실패 | 1       | 해결됨 (MonthCalendar 구현)   |
+| 2026-02-14 | Playwright webServer 대기 지연      | 1       | 해결됨 (dev 서버 포트 고정)   |
 
 ## 5-Question Reboot Check
 
