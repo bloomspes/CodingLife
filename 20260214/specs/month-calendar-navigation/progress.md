@@ -59,15 +59,18 @@
 - `src/lib/date.ts` (날짜 유틸)
 - `src/lib/__tests__/calendar.test.ts` (달력 유틸 테스트)
 
-### Phase 4: Testing ⏸️
+### Phase 4: Testing 🔄
 
-아직 시작 안 함
+**작업 내역**:
+
+1. 전체 빌드 확인 (`pnpm build`).
 
 ## Test Results
 
 | Test             | Input | Expected | Actual           | Status |
 | ---------------- | ----- | -------- | ---------------- | ------ |
 | 달력 렌더링/이동 | -     | Pass     | All tests passed | ✅     |
+| 전체 빌드        | -     | Pass     | Build succeeded  | ✅     |
 
 ## Error Log
 
@@ -75,6 +78,7 @@
 | ---------- | ----------------------------------- | ------- | ---------------------------- |
 | 2026-02-14 | No test files found (vitest exit 1) | 3       | 해결됨 (테스트 추가 후 통과) |
 | 2026-02-14 | MonthCalendar 버튼 동작 테스트 실패 | 1       | 해결됨 (상태/핸들러 추가)    |
+| 2026-02-14 | Vite build 타입 오류 (test config)  | 1       | 해결됨 (vitest/config 사용)  |
 | 2026-02-14 | MonthCalendar 기본 렌더 테스트 실패 | 1       | 해결됨 (MonthCalendar 구현)  |
 
 ## 5-Question Reboot Check
