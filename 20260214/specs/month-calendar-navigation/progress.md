@@ -16,7 +16,7 @@
 - `specs/month-calendar-navigation/README.md` (작성)
 - `specs/month-calendar-navigation/spec.md` (작성)
 
-### Phase 2: Planning & Structure 🔄
+### Phase 2: Planning & Structure ✅
 
 **작업 내역**:
 
@@ -42,6 +42,7 @@
 
 1. App에서 MonthCalendar 연결 (Outside-in 첫 단계).
 2. MonthCalendar 기본 렌더 (연월, 요일, 오늘 강조 표시).
+3. CalendarHeader 버튼 동작 (이전/다음/오늘 월 이동).
 
 **생성/수정 파일**:
 
@@ -50,6 +51,7 @@
 - `src/App.test.tsx` (App 렌더링 테스트 추가)
 - `src/components/__tests__/MonthCalendar.test.tsx` (MonthCalendar 기본 렌더
   테스트)
+- `src/components/MonthCalendar.tsx` (월 이동 상태/핸들러 추가)
 
 ### Phase 4: Testing ⏸️
 
@@ -66,6 +68,7 @@
 | Timestamp  | Error                               | Attempt | Resolution                   |
 | ---------- | ----------------------------------- | ------- | ---------------------------- |
 | 2026-02-14 | No test files found (vitest exit 1) | 3       | 해결됨 (테스트 추가 후 통과) |
+| 2026-02-14 | MonthCalendar 버튼 동작 테스트 실패 | 1       | 해결됨 (상태/핸들러 추가)    |
 | 2026-02-14 | MonthCalendar 기본 렌더 테스트 실패 | 1       | 해결됨 (MonthCalendar 구현)  |
 
 ## 5-Question Reboot Check

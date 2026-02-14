@@ -1,3 +1,5 @@
+import { useMemo, useState } from "react";
+
 const WEEKDAY_LABELS = ["일", "월", "화", "수", "목", "금", "토"];
 
 type CalendarDay = {
@@ -12,6 +14,10 @@ function isSameDay(left: Date, right: Date) {
     left.getMonth() === right.getMonth() &&
     left.getDate() === right.getDate()
   );
+}
+
+function addMonths(date: Date, amount: number) {
+  return new Date(date.getFullYear(), date.getMonth() + amount, 1);
 }
 
 function buildMonthMatrix(baseDate: Date, today: Date) {
@@ -55,17 +61,23 @@ function buildMonthMatrix(baseDate: Date, today: Date) {
 }
 
 export default function MonthCalendar() {
-  const today = new Date();
-  const baseDate = new Date(today.getFullYear(), today.getMonth(), 1);
-  const monthLabel = `${today.getFullYear()}년 ${today.getMonth() + 1}월`;
-  const weeks = buildMonthMatrix(baseDate, today);
+  const today = useMemo(() => new Date(), []);
+  const [baseDate, setBaseDate] = useState(
+    new Date(today.getFullYear(), today.getMonth(), 1),
+  );
+
+  const monthLabel = `${baseDate.getFullYear()}년 ${baseDate.getMonth() + 1}월`;
+  const weeks = useMemo(
+    () => buildMonthMatrix(baseDate, today),
+    [baseDate, today],
+  );
 
   return (
     <section
       className="mx-auto flex min-h-screen w-full max-w-5xl flex-col px-6 py-10"
       data-testid="month-calendar"
     >
-      <header className="mb-8 flex items-center justify-between">
+      <header className="mb-8 flex flex-wrap items-center justify-between gap-4">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
             Calendar
@@ -74,22 +86,27 @@ export default function MonthCalendar() {
             {monthLabel}
           </h1>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <button
             className="rounded-full border border-slate-200 bg-white px-3 py-2 text-sm text-slate-600"
             type="button"
+            onClick={() => setBaseDate((prev) => addMonths(prev, -1))}
           >
             이전
           </button>
           <button
             className="rounded-full border border-slate-200 bg-white px-3 py-2 text-sm text-slate-600"
             type="button"
+            onClick={() => setBaseDate((prev) => addMonths(prev, 1))}
           >
             다음
           </button>
           <button
             className="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white"
             type="button"
+            onClick={() =>
+              setBaseDate(new Date(today.getFullYear(), today.getMonth(), 1))
+            }
           >
             오늘
           </button>

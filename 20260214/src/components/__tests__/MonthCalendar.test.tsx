@@ -1,4 +1,4 @@
-import { render, screen, within } from "@testing-library/react";
+import { fireEvent, render, screen, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import MonthCalendar from "../MonthCalendar";
 
@@ -38,5 +38,33 @@ describe("MonthCalendar", () => {
       .map((node) => node.textContent);
 
     expect(labels).toEqual(["일", "월", "화", "수", "목", "금", "토"]);
+  });
+
+  it("moves to the previous and next month from header controls", () => {
+    render(<MonthCalendar />);
+
+    fireEvent.click(screen.getByRole("button", { name: "이전" }));
+    expect(
+      screen.getByRole("heading", { name: "2026년 1월" }),
+    ).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: "다음" }));
+    expect(
+      screen.getByRole("heading", { name: "2026년 2월" }),
+    ).toBeInTheDocument();
+  });
+
+  it("returns to the current month when clicking today", () => {
+    render(<MonthCalendar />);
+
+    fireEvent.click(screen.getByRole("button", { name: "다음" }));
+    expect(
+      screen.getByRole("heading", { name: "2026년 3월" }),
+    ).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: "오늘" }));
+    expect(
+      screen.getByRole("heading", { name: "2026년 2월" }),
+    ).toBeInTheDocument();
   });
 });
