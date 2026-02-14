@@ -22,10 +22,19 @@
 
 1. Outside-in 순서로 plan.md 구현 단계 정리.
 2. TDD/ATDD 관점 보강.
+3. 프로젝트 초기 설정 (Vite/TS/Tailwind/Vitest/Prettier).
+4. 모호한 체크박스(초기 컴포넌트/유틸 구조 확정) 제거.
 
 **생성/수정 파일**:
 
 - `specs/month-calendar-navigation/plan.md` (작성/수정)
+- `package.json` (스크립트/의존성 설정)
+- `pnpm-lock.yaml` (의존성 잠금 파일)
+- `vite.config.ts` (Vite/테스트 설정)
+- `tsconfig.app.json` (테스트 타입 추가)
+- `src/index.css` (Tailwind 초기화)
+- `src/test/setup.ts` (Testing Library 초기 설정)
+- `.nvmrc` (Node 버전 고정)
 
 ### Phase 3: Implementation ⏸️
 
@@ -37,15 +46,17 @@
 
 ## Test Results
 
-| Test | Input | Expected | Actual | Status |
-| ---- | ----- | -------- | ------ | ------ |
-| -    | -     | -        | -      | -      |
+| Test      | Input      | Expected | Actual                       | Status |
+| --------- | ---------- | -------- | ---------------------------- | ------ |
+| pnpm test | 2026-02-14 | Pass     | No test files found (exit 1) | ❌     |
+| pnpm test | 2026-02-14 | Pass     | No test files found (exit 1) | ❌     |
+| pnpm test | 2026-02-14 | Pass     | No test files found (exit 1) | ❌     |
 
 ## Error Log
 
-| Timestamp | Error | Attempt | Resolution |
-| --------- | ----- | ------- | ---------- |
-| -         | -     | -       | -          |
+| Timestamp  | Error                               | Attempt        | Resolution |
+| ---------- | ----------------------------------- | -------------- | ---------- |
+| 2026-02-14 | No test files found (vitest exit 1) | `pnpm test` x3 | 미해결     |
 
 ## 5-Question Reboot Check
 
