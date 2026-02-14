@@ -43,6 +43,7 @@
 1. App에서 MonthCalendar 연결 (Outside-in 첫 단계).
 2. MonthCalendar 기본 렌더 (연월, 요일, 오늘 강조 표시).
 3. CalendarHeader 버튼 동작 (이전/다음/오늘 월 이동).
+4. CalendarGrid 컴포넌트 분리.
 
 **생성/수정 파일**:
 
@@ -52,6 +53,7 @@
 - `src/components/__tests__/MonthCalendar.test.tsx` (MonthCalendar 기본 렌더
   테스트)
 - `src/components/MonthCalendar.tsx` (월 이동 상태/핸들러 추가)
+- `src/components/CalendarGrid.tsx` (달력 그리드 분리)
 
 ### Phase 4: Testing ⏸️
 

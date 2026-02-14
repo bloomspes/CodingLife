@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import CalendarGrid from "./CalendarGrid";
 
 const WEEKDAY_LABELS = ["일", "월", "화", "수", "목", "금", "토"];
 
@@ -125,32 +126,7 @@ export default function MonthCalendar() {
               </div>
             ))}
           </div>
-          <div className="grid gap-2">
-            {weeks.map((week, weekIndex) => (
-              <div
-                key={`week-${weekIndex}`}
-                className="grid grid-cols-7 gap-2"
-                role="row"
-              >
-                {week.map((day) => (
-                  <div
-                    key={day.date.toISOString()}
-                    className={`flex h-12 items-center justify-center rounded-2xl text-sm ${
-                      day.isToday
-                        ? "bg-slate-900 text-white"
-                        : day.inCurrentMonth
-                          ? "bg-slate-50 text-slate-900"
-                          : "text-slate-300"
-                    }`}
-                    role="gridcell"
-                    aria-current={day.isToday ? "date" : undefined}
-                  >
-                    {day.date.getDate()}
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
+          <CalendarGrid weeks={weeks} />
         </div>
       </div>
     </section>
