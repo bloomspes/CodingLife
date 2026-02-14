@@ -65,3 +65,8 @@ OpenAPI Specification 섹션을 삭제.
 ### API 필요 없음 명시 (2026-02-14)
 
 spec에서 API 없이 클라이언트만으로 구현하는 기능임을 명시했다.
+
+### 계획 단계 정리 (2026-02-14)
+
+Outside-in 순서와 TDD 흐름을 plan에 반영하고, tasks/progress 작성 단계에
+진입했다.
