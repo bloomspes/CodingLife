@@ -1,16 +1,31 @@
 # AGENTS
 
-이 프로젝트는 File-based Planning Workflow를 따른다.
+## 공통 규칙
 
-## 진행 순서
+- 모든 대화는 한국어로 진행한다.
+- 마크다운 파일은 항상 prettier를 실행한다.
+
+## 기술 스택
+
+- TypeScript, React, Tailwind, Vite
+- 패키지 매니저: pnpm
+- 단위 테스트: Vitest + React Testing Library
+- E2E 테스트: Playwright
+- Node.js 버전은 `.nvmrc`로 고정
+
+## 개발 진행 순서
+
+이 프로젝트는 File-based Planning Workflow를 따른다.
 
 1. README 작성 (사람 검토)
 2. spec 작성 (사람 검토)
 3. plan 작성 (사람 검토)
 4. tasks, progress, findings 작성 (만든 뒤 작업하면서 갱신)
 
-## 규칙
+## 개발 규칙
 
+- 개발 작업에만 본 규칙을 적용한다. 일반적인 문서/기타 파일 변경은 규칙을
+  생략하고 커밋 등 진행한다.
 - findings는 처음부터라도 배운 점이 있으면 계속 내용 추가
 - spec은 기술이 아닌 요구사항 중심으로 작성
 - plan은 기술, 구현에 대한 계획
@@ -25,8 +40,7 @@
 - 해석이 필요한 경우 임의 판단으로 수정하지 않고, 먼저 사용자에게 기준을
   확인한다.
 - 수동 테스트는 가능하면 자동화(E2E)로 재현 가능한 형태로 유지한다.
-- 문서 업데이트, 검토, 동기화, 검토를 매번 자주 실행하고 prettier도 항상
-  자동으로 실행
+- 문서 업데이트, 검토, 동기화, 검토를 매번 자주 실행한다.
 - 개발은 항상 Outside-in 순서로 진행
 - TDD를 무조건 적용
 - 기능 개발 시작 시 `specs/` 아래 기능 이름을 반영한 적절한 kebab-case 폴더를
@@ -35,18 +49,10 @@
 - 커밋도 자주 수행
 - 사고 과정을 끊임없이 기록
 
-## 체크박스 완료 절차
+## 개발 체크박스 완료 절차
 
 1. 문서 업데이트 (tasks/progress/findings 즉시 반영)
 2. 검증 1차 (테스트/빌드/수동 중 해당 항목)
 3. 검증 2차 (다시 실행)
 4. 검증 3차 (다시 실행)
 5. 커밋
-
-## 기술 스택
-
-- TypeScript, React, Tailwind, Vite
-- 패키지 매니저: pnpm
-- 단위 테스트: Vitest + React Testing Library
-- E2E 테스트: Playwright
-- Node.js 버전은 `.nvmrc`로 고정
