@@ -76,12 +76,13 @@
 
 ## Test Results
 
-| Test             | Input | Expected | Actual           | Status |
-| ---------------- | ----- | -------- | ---------------- | ------ |
-| 달력 렌더링/이동 | -     | Pass     | All tests passed | ✅     |
-| 전체 빌드        | -     | Pass     | Build succeeded  | ✅     |
-| 전체 테스트      | -     | Pass     | All tests passed | ✅     |
-| 수동 테스트      | -     | Pass     | E2E passed       | ✅     |
+| Test                      | Input | Expected | Actual                      | Status |
+| ------------------------- | ----- | -------- | --------------------------- | ------ |
+| 달력 렌더링/이동          | -     | Pass     | Pass (Vitest 6 tests)       | ✅     |
+| 달력 유틸                 | -     | Pass     | Pass (Vitest 3 tests)       | ✅     |
+| 전체 테스트               | -     | Pass     | Pass (Vitest 9 tests)       | ✅     |
+| 수동 테스트 시나리오(E2E) | -     | Pass     | Pass (Playwright 3 tests)   | ✅     |
+| 전체 빌드                 | -     | Pass     | Pass (Vite build succeeded) | ✅     |
 
 ## Error Log
 

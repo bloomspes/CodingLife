@@ -30,6 +30,7 @@
 - 문서 템플릿과 예제를 최우선으로 준수하며, 임의로 형식/용어를 바꾸지 않는다.
 - 해석이 필요한 경우 임의 판단으로 수정하지 않고, 먼저 사용자에게 기준을
   확인한다.
+- 수동 테스트는 가능하면 자동화(E2E)로 재현 가능한 형태로 유지한다.
 - 문서 업데이트, 검토, 동기화, 검토를 매번 자주 실행하고 prettier도 항상
   자동으로 실행
 - 개발은 항상 Outside-in 순서로 진행
@@ -44,5 +45,6 @@
 
 - TypeScript, React, Tailwind, Vite
 - 패키지 매니저: pnpm
-- 테스트: Vitest + React Testing Library
+- 단위 테스트: Vitest + React Testing Library
+- E2E 테스트: Playwright
 - Node.js 버전은 `.nvmrc`로 고정
