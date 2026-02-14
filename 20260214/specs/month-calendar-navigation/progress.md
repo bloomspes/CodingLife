@@ -46,17 +46,15 @@
 
 ## Test Results
 
-| Test      | Input      | Expected | Actual                       | Status |
-| --------- | ---------- | -------- | ---------------------------- | ------ |
-| pnpm test | 2026-02-14 | Pass     | No test files found (exit 1) | ❌     |
-| pnpm test | 2026-02-14 | Pass     | No test files found (exit 1) | ❌     |
-| pnpm test | 2026-02-14 | Pass     | No test files found (exit 1) | ❌     |
+| Test             | Input | Expected | Actual                       | Status |
+| ---------------- | ----- | -------- | ---------------------------- | ------ |
+| 달력 렌더링/이동 | -     | Pass     | No test files found (exit 1) | ❌     |
 
 ## Error Log
 
-| Timestamp  | Error                               | Attempt        | Resolution |
-| ---------- | ----------------------------------- | -------------- | ---------- |
-| 2026-02-14 | No test files found (vitest exit 1) | `pnpm test` x3 | 미해결     |
+| Timestamp  | Error                               | Attempt | Resolution |
+| ---------- | ----------------------------------- | ------- | ---------- |
+| 2026-02-14 | No test files found (vitest exit 1) | 3       | 미해결     |
 
 ## 5-Question Reboot Check
 
