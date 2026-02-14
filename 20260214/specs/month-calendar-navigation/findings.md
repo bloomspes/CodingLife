@@ -4,20 +4,24 @@
 
 ## Requirements
 
-- [ ] FR-1: 오늘 기준 이번 달 달력 표시.
-- [ ] FR-2: 연월 표시 및 이전/다음 버튼 제공.
-- [ ] FR-3: 오늘 버튼으로 오늘 달로 복귀.
-- [ ] FR-4: 오늘 날짜 강조 표시.
+- [x] FR-1: 오늘 기준 이번 달 달력 표시.
+- [x] FR-2: 연월 표시 및 이전/다음 버튼 제공.
+- [x] FR-3: 오늘 버튼으로 오늘 달로 복귀.
+- [x] FR-4: 오늘 날짜 강조 표시.
 
 ## Research Findings
 
 ### 코드베이스 구조
 
-- 아직 UI/도메인 코드 없음.
+- `src/components`에 UI 컴포넌트가 모여 있다.
+- `src/lib`에 날짜/달력 계산 유틸이 분리되어 있다.
+- `tests/e2e`에 Playwright 시나리오 테스트가 있다.
+- `tests/units`는 Vitest 단위 테스트 폴더로 분리했다.
 
 ### 기존 패턴
 
-- 아직 정의된 패턴 없음.
+- Outside-in 순서로 컴포넌트를 연결해 사용자 흐름을 먼저 확보한다.
+- UI와 계산 로직을 분리하고, 유틸은 `src/lib`에 둔다.
 
 ## Resources
 
@@ -27,13 +31,26 @@
 
 ### 코드 참조
 
-- 설명: `specs/month-calendar-navigation/spec.md`
+- 요구사항: `specs/month-calendar-navigation/spec.md`
+- 구현 계획: `specs/month-calendar-navigation/plan.md`
+- 진행 체크: `specs/month-calendar-navigation/tasks.md`
+- 상태 기록: `specs/month-calendar-navigation/progress.md`
+- 핵심 컴포넌트: `src/components/MonthCalendar.tsx`
+- 그리드 컴포넌트: `src/components/CalendarGrid.tsx`
+- 달력 유틸: `src/lib/calendar.ts`
+- 날짜 유틸: `src/lib/date.ts`
+- 단위 테스트: `src/components/__tests__/MonthCalendar.test.tsx`
+- 단위 테스트: `src/lib/__tests__/calendar.test.ts`
+- E2E 테스트: `tests/e2e/month-calendar.spec.ts`
 
 ## Technical Decisions
 
-| Decision                             | Rationale                               |
-| ------------------------------------ | --------------------------------------- |
-| 이번 기능은 클라이언트 UI만으로 구현 | API가 필요하지 않은 단순 달력 표시 기능 |
+| Decision                             | Rationale                                  |
+| ------------------------------------ | ------------------------------------------ |
+| 이번 기능은 클라이언트 UI만으로 구현 | API가 필요하지 않은 단순 달력 표시 기능    |
+| `html` lang을 `ko`로 지정            | 한국어 콘텐츠의 접근성과 SEO를 높이기 위함 |
+| Vitest에 include/exclude 추가        | E2E와 unit 테스트 수집 충돌을 피하기 위함  |
+| 테스트 결과를 종류/레이어로 분류     | 검증 기록을 더 명확히 남기기 위함          |
 
 ## Issues Encountered
 
@@ -54,6 +71,24 @@ OpenAPI Specification 섹션을 삭제.
 **결과**:
 
 요구사항 문서가 UI 기능에 맞게 정리됨.
+
+### 2. Vitest와 Playwright 스펙 충돌
+
+**문제**:
+
+Vitest가 `tests/e2e`를 수집하면서 Playwright `test.beforeEach`가 실패함.
+
+**원인**:
+
+E2E 테스트가 Vitest 수집 대상에 포함되어 있었음.
+
+**해결**:
+
+Vitest include/exclude로 `tests/e2e`를 제외하고 `tests/units`를 분리함.
+
+**결과**:
+
+`npm test`와 `npm run test:e2e`가 충돌 없이 병행됨.
 
 ## Learnings
 
@@ -157,3 +192,7 @@ Playwright E2E 테스트로 수동 테스트 시나리오를 자동화했다.
 
 - Vitest는 `tests/e2e`를 제외하고 unit 테스트만 수집하도록 설정했다.
 - E2E는 Playwright가 `tests/e2e`만 실행하도록 유지했다.
+
+### 테스트 결과 분류 확장 (2026-02-14)
+
+- Test Results는 테스트 종류와 레이어 기준을 함께 기록하도록 확장했다.
