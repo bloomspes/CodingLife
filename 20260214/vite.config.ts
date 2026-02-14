@@ -10,4 +10,9 @@ export default defineConfig({
     globals: true,
     setupFiles: "./src/test/setup.ts",
   },
+  server: {
+    host: "127.0.0.1",
+    port: 4173,
+    strictPort: true,
+  },
 });

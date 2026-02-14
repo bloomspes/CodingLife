@@ -59,12 +59,20 @@
 - `src/lib/date.ts` (날짜 유틸)
 - `src/lib/__tests__/calendar.test.ts` (달력 유틸 테스트)
 
-### Phase 4: Testing 🔄
+### Phase 4: Testing ✅
 
 **작업 내역**:
 
 1. 전체 빌드 확인 (`pnpm build`).
 2. 전체 테스트 통과 확인 (`pnpm test`).
+3. Playwright로 수동 테스트 자동화 실행 (`pnpm test:e2e`).
+
+**생성/수정 파일**:
+
+- `playwright.config.ts` (E2E 테스트 설정)
+- `tests/e2e/month-calendar.spec.ts` (수동 테스트 시나리오)
+- `vite.config.ts` (dev 서버 포트 고정)
+- `package.json` (E2E 스크립트 추가)
 
 ## Test Results
 
@@ -73,6 +81,7 @@
 | 달력 렌더링/이동 | -     | Pass     | All tests passed | ✅     |
 | 전체 빌드        | -     | Pass     | Build succeeded  | ✅     |
 | 전체 테스트      | -     | Pass     | All tests passed | ✅     |
+| 수동 테스트      | -     | Pass     | E2E passed       | ✅     |
 
 ## Error Log
 
@@ -82,13 +91,14 @@
 | 2026-02-14 | MonthCalendar 버튼 동작 테스트 실패 | 1       | 해결됨 (상태/핸들러 추가)    |
 | 2026-02-14 | Vite build 타입 오류 (test config)  | 1       | 해결됨 (vitest/config 사용)  |
 | 2026-02-14 | MonthCalendar 기본 렌더 테스트 실패 | 1       | 해결됨 (MonthCalendar 구현)  |
+| 2026-02-14 | Playwright webServer 대기 지연      | 1       | 해결됨 (dev 서버 포트 고정)  |
 
 ## 5-Question Reboot Check
 
 | Question               | Answer                        |
 | ---------------------- | ----------------------------- |
-| 1. 현재 어느 단계인가? | Phase 3 (진행 중)             |
-| 2. 다음에 할 일은?     | CalendarHeader 버튼 동작 구현 |
+| 1. 현재 어느 단계인가? | Phase 4 (완료)                |
+| 2. 다음에 할 일은?     | 작업 완료 확인 및 공유        |
 | 3. 목표는?             | 월간 달력 기본 보기/이동 구현 |
 | 4. 지금까지 배운 것?   | findings.md 참고              |
 | 5. 완료한 작업은?      | 위 Phase 1/2 작업 내역 참고   |

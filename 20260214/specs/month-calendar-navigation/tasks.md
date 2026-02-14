@@ -6,7 +6,7 @@ Outside-in + TDD로 월간 달력 기본 표시와 월 이동/오늘 이동 기�
 
 ## Current Phase
 
-🔄 Phase 3: Implementation
+✅ Phase 4: Testing
 
 ## Phases
 
@@ -30,11 +30,11 @@ Outside-in + TDD로 월간 달력 기본 표시와 월 이동/오늘 이동 기�
 - [x] CalendarGrid 달력 그리드 (Red/Green/Refactor)
 - [x] 달력 계산 유틸 (Red/Green/Refactor)
 
-### Phase 4: Testing 🔄
+### Phase 4: Testing ✅
 
 - [x] 전체 빌드 확인
 - [x] 전체 테스트 통과 확인
-- [ ] 수동 테스트
+- [x] 수동 테스트
 
 ## Key Questions
 
