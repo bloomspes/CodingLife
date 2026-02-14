@@ -64,6 +64,7 @@
 **작업 내역**:
 
 1. 전체 빌드 확인 (`pnpm build`).
+2. 전체 테스트 통과 확인 (`pnpm test`).
 
 ## Test Results
 
@@ -71,6 +72,7 @@
 | ---------------- | ----- | -------- | ---------------- | ------ |
 | 달력 렌더링/이동 | -     | Pass     | All tests passed | ✅     |
 | 전체 빌드        | -     | Pass     | Build succeeded  | ✅     |
+| 전체 테스트      | -     | Pass     | All tests passed | ✅     |
 
 ## Error Log
 
