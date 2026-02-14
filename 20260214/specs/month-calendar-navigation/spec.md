@@ -1,111 +1,86 @@
-# Feature Specification: 기능명
-
-<!--
-제품 요구사항을 정의하는 문서입니다.
-PRD(Product Requirements Document) 수준으로 작성하며, 기술적인 세부사항은
-포함하지 않습니다.
-
-포함하지 않는 내용 (plan.md, findings.md에서 다룸):
-- 도메인 모델 (Aggregate, Entity, Value Object, Exception 등)
-- 동작 방식의 코드 예시
-- 기술적 구현 세부사항
--->
+# Feature Specification: 월간 달력 기본 보기 및 이동
 
 ## Overview
 
-<!-- 기능의 핵심 내용을 설명합니다. -->
+오늘 날짜를 기준으로 이번 달 달력을 표시하고, 사용자가 이전/다음 달로 이동하거나
+언제든 오늘이 속한 달로 돌아갈 수 있도록 한다.
 
 ## User Scenarios & Testing (mandatory)
 
-<!-- User Story 1, 2, ... 형식으로 작성합니다. -->
+### User Story 1: 이번 달 달력 확인
 
-### User Story 1: 시나리오명
-
-- As: ~는
-- I: ~할 수 있다
-- So: ~하기 위해
+- As: 달력을 확인하려는 사용자는
+- I: 오늘 기준 이번 달 달력을 볼 수 있다
+- So: 이번 달 일정과 날짜를 한눈에 파악하기 위해
 
 #### Acceptance Scenarios
 
-Scenario 1: **시나리오명**
+Scenario 1: **앱 시작 시 이번 달 표시**
 
-- Given: ~할 때
-- When: ~하면
-- Then: 결과
+- Given: 사용자가 앱을 연다
+- When: 앱이 초기 화면을 렌더링한다
+- Then: 오늘이 속한 달의 달력이 표시된다
 
-Scenario 2: **시나리오명**
+Scenario 2: **오늘 날짜 강조 표시**
 
-- Given: ~할 때
-- When: ~하면
-- Then: 결과
+- Given: 오늘이 포함된 달력이 표시된다
+- When: 달력이 렌더링된다
+- Then: 오늘 날짜가 다른 날짜보다 도드라지게 표시된다
+
+### User Story 2: 이전/다음 달 이동
+
+- As: 다른 달을 확인하려는 사용자는
+- I: 이전/다음 달로 이동할 수 있다
+- So: 과거 혹은 미래의 달력을 확인하기 위해
+
+#### Acceptance Scenarios
+
+Scenario 1: **이전 달 이동**
+
+- Given: 이번 달 달력이 표시된다
+- When: 사용자가 이전 달 버튼을 누른다
+- Then: 이전 달 달력이 표시된다
+
+Scenario 2: **다음 달 이동**
+
+- Given: 이번 달 달력이 표시된다
+- When: 사용자가 다음 달 버튼을 누른다
+- Then: 다음 달 달력이 표시된다
+
+### User Story 3: 오늘로 이동
+
+- As: 현재 월로 빠르게 돌아가려는 사용자는
+- I: 오늘이 속한 달로 즉시 이동할 수 있다
+- So: 현재 날짜 기준 화면으로 복귀하기 위해
+
+#### Acceptance Scenarios
+
+Scenario 1: **오늘로 이동 버튼 사용**
+
+- Given: 사용자가 다른 달을 보고 있다
+- When: 사용자가 오늘 버튼을 누른다
+- Then: 오늘이 속한 달의 달력이 표시된다
 
 ## Functional Requirements (mandatory)
 
-<!-- FR-1, FR-2, ... 형식으로 번호를 붙여 작성합니다. -->
-
-- FR-1: MUST 요구사항 설명
-- FR-2: SHOULD 요구사항 설명
+- FR-1: 앱은 오늘 날짜를 기준으로 이번 달 달력을 표시해야 한다.
+- FR-2: 앱은 달력 상단에 연월을 표시해야 한다.
+- FR-3: 앱은 이전 달 버튼과 다음 달 버튼을 제공해야 한다.
+- FR-4: 앱은 이전 달 버튼을 누르면 이전 달 달력을 표시해야 한다.
+- FR-5: 앱은 다음 달 버튼을 누르면 다음 달 달력을 표시해야 한다.
+- FR-6: 앱은 오늘 날짜를 도드라지게 표시해야 한다.
+- FR-7: 앱은 오늘로 이동하는 버튼을 제공해야 한다.
+- FR-8: 앱은 오늘 버튼을 누르면 오늘이 속한 달 달력을 표시해야 한다.
 
 ## Constraints (mandatory)
 
-<!-- CON-1, CON-2, ... 형식으로 번호를 붙여 작성합니다. -->
-
-- CON-1: MUST 제약사항 설명
-- CON-2: MUST 제약사항 설명
+- CON-1: 달력은 오늘 기준으로 해당 월을 표시해야 한다.
+- CON-2: 월 이동은 이전/다음 월 단위로만 동작해야 한다.
+- CON-3: 오늘 강조 표시는 시각적으로 구분될 정도로 명확해야 한다.
 
 ## Success Criteria (mandatory)
 
-<!-- SC-1, SC-2, ... 형식으로 번호를 붙여 작성합니다. -->
-
-- SC-1: 성공 기준 설명
-- SC-2: 성공 기준 설명
-
-## OpenAPI Specification
-
-<!-- 반드시 OpenAPI 3.0 형식(YAML)으로만 정리합니다. -->
-
-```yaml
-openapi: 3.0.3
-info:
-  title: API 제목
-  version: 1.0.0
-  description: |
-    API 설명
-
-paths:
-  /endpoint:
-    post:
-      summary: 요약
-      description: |
-        상세 설명
-      operationId: operationId
-      tags:
-        - Tag
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: id
-          in: path
-          required: true
-          description: ID 설명
-          schema:
-            type: string
-      responses:
-        '200':
-          description: 성공
-        '400':
-          description: 잘못된 요청
-        '401':
-          description: 인증 실패
-        '403':
-          description: 권한 없음
-        '404':
-          description: 리소스 없음
-
-components:
-  securitySchemes:
-    bearerAuth:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-```
+- SC-1: 앱 시작 시 오늘이 속한 달 달력이 항상 표시된다.
+- SC-2: 이전/다음 달 이동 버튼이 정상 동작한다.
+- SC-3: 오늘 버튼이 정상 동작하며 오늘 달로 돌아간다.
+- SC-4: 오늘 날짜가 시각적으로 식별 가능하다.
