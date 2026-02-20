@@ -11,7 +11,7 @@
 문서는 다음 순서로 작성하고, 각 파일을 사람이 검토한 후 다음 단계로 진행합니다.
 
 ```
-README (사람 검토) → spec (사람 검토) → plan (사람 검토) → tasks, progress, findings
+README (사람 검토) → spec (사람 검토) → plan (사람 검토) → tasks, progress, findings (작업하면서 계속 갱신)
 ```
 
 ### 단계별 설명
