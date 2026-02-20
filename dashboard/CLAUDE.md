@@ -53,5 +53,7 @@
 ### 구현
 
 - 구현은 `plan.md`가 승인된 이후에 시작한다.
+- **Outside-in** 순서로 개발한다. (UI → Application → Domain)
+- **TDD**를 무조건 적용한다. (Red → Green → Refactor)
 - 구현 중 발견한 사항은 `findings.md`에 즉시 기록한다.
 - 진행 상황은 `progress.md`에 세션 단위로 기록한다.
