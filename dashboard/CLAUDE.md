@@ -50,7 +50,7 @@
 
 ### 개발 방식
 
-- 기능을 시작할 때 `specs/<kebab-case-기능명>/` 폴더를 만들고 템플릿 6개 파일을 복사한 뒤, README.md부터 작성한다.
+- 기능을 시작할 때 `specs/` 아래에 기능 이름을 반영한 적절한 kebab-case 폴더를 만들고, 템플릿 6개 파일을 복사한 뒤 README.md부터 작성한다.
 - 구현은 `plan.md`가 승인된 이후에 시작한다.
 - **Outside-in** 순서로 개발한다. (UI → Application → Domain)
 - **TDD**를 무조건 적용한다. (Red → Green → Refactor)
