@@ -1,4 +1,4 @@
-# CLAUDE.md
+# 로봇 모니터링 대시보드 개발 가이드
 
 이 프로젝트는 **File-Based Planning Workflow**를 따릅니다.
 
