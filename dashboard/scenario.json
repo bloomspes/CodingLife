@@ -1,0 +1,613 @@
+{
+  "meta": {
+    "totalDuration": 180000,
+    "robotCount": 17,
+    "scenarioName": "Full Shift Cycle with Maintenance Event"
+  },
+  "robots": [
+    {
+      "id": "robot-001",
+      "name": "Assembler-Alpha",
+      "type": "ARM",
+      "status": "active",
+      "location": "Zone-A",
+      "battery": 98,
+      "lastActive": "2024-01-01T09:00:00Z"
+    },
+    {
+      "id": "robot-002",
+      "name": "Assembler-Beta",
+      "type": "ARM",
+      "status": "active",
+      "location": "Zone-A",
+      "battery": 96,
+      "lastActive": "2024-01-01T09:00:05Z"
+    },
+    {
+      "id": "robot-003",
+      "name": "Assembler-Gamma",
+      "type": "ARM",
+      "status": "active",
+      "location": "Zone-A",
+      "battery": 95,
+      "lastActive": "2024-01-01T09:00:10Z"
+    },
+    {
+      "id": "robot-004",
+      "name": "Welder-Prime",
+      "type": "WELD",
+      "status": "active",
+      "location": "Zone-B",
+      "battery": 88,
+      "lastActive": "2024-01-01T08:55:00Z"
+    },
+    {
+      "id": "robot-005",
+      "name": "Inspector-Eye",
+      "type": "SENSOR",
+      "status": "active",
+      "location": "Zone-C",
+      "battery": 72,
+      "lastActive": "2024-01-01T08:45:00Z"
+    },
+    {
+      "id": "robot-006",
+      "name": "Packager-Box",
+      "type": "PACK",
+      "status": "active",
+      "location": "Zone-D",
+      "battery": 91,
+      "lastActive": "2024-01-01T09:01:00Z"
+    },
+    {
+      "id": "robot-007",
+      "name": "Packager-Wrap",
+      "type": "PACK",
+      "status": "idle",
+      "location": "Zone-D",
+      "battery": 65,
+      "lastActive": "2024-01-01T08:30:00Z"
+    },
+    {
+      "id": "robot-008",
+      "name": "Transporter-T1",
+      "type": "AGV",
+      "status": "active",
+      "location": "Corridor-1",
+      "battery": 82,
+      "lastActive": "2024-01-01T09:02:00Z"
+    },
+    {
+      "id": "robot-009",
+      "name": "Transporter-T2",
+      "type": "AGV",
+      "status": "active",
+      "location": "Corridor-2",
+      "battery": 78,
+      "lastActive": "2024-01-01T09:02:15Z"
+    },
+    {
+      "id": "robot-010",
+      "name": "AGV-Runner",
+      "type": "AGV",
+      "status": "active",
+      "location": "Zone-A",
+      "battery": 45,
+      "lastActive": "2024-01-01T09:03:00Z"
+    },
+    {
+      "id": "robot-011",
+      "name": "AGV-Lifter",
+      "type": "FORKLIFT",
+      "status": "idle",
+      "location": "Warehouse",
+      "battery": 99,
+      "lastActive": "2024-01-01T08:00:00Z"
+    },
+    {
+      "id": "robot-012",
+      "name": "Sorter-Quick",
+      "type": "SORT",
+      "status": "active",
+      "location": "Zone-E",
+      "battery": 85,
+      "lastActive": "2024-01-01T09:01:30Z"
+    },
+    {
+      "id": "robot-013",
+      "name": "Painter-Spray",
+      "type": "PAINT",
+      "status": "active",
+      "location": "Zone-F",
+      "battery": 60,
+      "lastActive": "2024-01-01T08:50:00Z"
+    },
+    {
+      "id": "robot-014",
+      "name": "Painter-Coat",
+      "type": "PAINT",
+      "status": "active",
+      "location": "Zone-F",
+      "battery": 58,
+      "lastActive": "2024-01-01T08:50:00Z"
+    },
+    {
+      "id": "robot-015",
+      "name": "Security-Scan",
+      "type": "STATIC",
+      "status": "active",
+      "location": "Gate-1",
+      "battery": 100,
+      "lastActive": "2024-01-01T09:00:00Z"
+    },
+    {
+      "id": "robot-016",
+      "name": "Cleaner-Sweep",
+      "type": "CLEAN",
+      "status": "active",
+      "location": "Lobby",
+      "battery": 30,
+      "lastActive": "2024-01-01T07:00:00Z"
+    },
+    {
+      "id": "robot-017",
+      "name": "Maint-Fix",
+      "type": "SERVICE",
+      "status": "idle",
+      "location": "Service-Bay",
+      "battery": 100,
+      "lastActive": "2024-01-01T06:00:00Z"
+    }
+  ],
+  "events": [
+    {
+      "delta": 2000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-001",
+        "updates": { "battery": 97, "location": "Zone-A" }
+      }
+    },
+    {
+      "delta": 1500,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-008",
+        "updates": { "location": "Zone-A", "status": "active" }
+      }
+    },
+    {
+      "delta": 1000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-004",
+        "updates": { "battery": 87, "temperature": "normal" }
+      }
+    },
+    {
+      "delta": 3000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-016",
+        "updates": { "location": "Zone-A", "battery": 29 }
+      }
+    },
+    {
+      "delta": 2000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-010",
+        "updates": { "location": "Zone-B", "battery": 44 }
+      }
+    },
+    {
+      "delta": 2500,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-005",
+        "updates": { "status": "active", "battery": 71 }
+      }
+    },
+    {
+      "delta": 5000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-007",
+        "updates": { "status": "active", "location": "Zone-D" }
+      }
+    },
+    {
+      "delta": 2000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-011",
+        "updates": { "status": "active", "location": "Zone-E" }
+      }
+    },
+    {
+      "delta": 4000,
+      "type": "ROBOT_UPDATED",
+      "data": { "robotId": "robot-013", "updates": { "battery": 59 } }
+    },
+    {
+      "delta": 5000,
+      "type": "ROBOT_UPDATED",
+      "data": { "robotId": "robot-008", "updates": { "location": "Zone-B" } }
+    },
+    {
+      "delta": 2000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-009",
+        "updates": { "location": "Zone-C", "battery": 77 }
+      }
+    },
+    {
+      "delta": 15000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-004",
+        "updates": { "status": "warning", "temperature": "high" }
+      }
+    },
+    {
+      "delta": 1000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-005",
+        "updates": { "status": "error", "errorCode": "ERR_VISION_01" }
+      }
+    },
+    {
+      "delta": 500,
+      "type": "ROBOT_UPDATED",
+      "data": { "robotId": "robot-001", "updates": { "status": "idle" } }
+    },
+    {
+      "delta": 500,
+      "type": "ROBOT_UPDATED",
+      "data": { "robotId": "robot-002", "updates": { "status": "idle" } }
+    },
+    {
+      "delta": 1000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-004",
+        "updates": { "status": "error", "errorCode": "ERR_HEAT_CRITICAL" }
+      }
+    },
+    {
+      "delta": 2000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-017",
+        "updates": { "status": "active", "location": "Transit" }
+      }
+    },
+    {
+      "delta": 1000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-010",
+        "updates": { "status": "idle", "location": "Zone-B-Waiting" }
+      }
+    },
+    {
+      "delta": 5000,
+      "type": "ROBOT_UPDATED",
+      "data": { "robotId": "robot-017", "updates": { "location": "Zone-C" } }
+    },
+    {
+      "delta": 3000,
+      "type": "ROBOT_UPDATED",
+      "data": { "robotId": "robot-005", "updates": { "status": "maintenance" } }
+    },
+    {
+      "delta": 4000,
+      "type": "ROBOT_UPDATED",
+      "data": { "robotId": "robot-017", "updates": { "location": "Zone-B" } }
+    },
+    {
+      "delta": 3000,
+      "type": "ROBOT_UPDATED",
+      "data": { "robotId": "robot-004", "updates": { "status": "maintenance" } }
+    },
+    {
+      "delta": 10000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-004",
+        "updates": { "status": "active", "temperature": "normal" }
+      }
+    },
+    {
+      "delta": 2000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-005",
+        "updates": { "status": "active", "errorCode": null }
+      }
+    },
+    {
+      "delta": 1000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-017",
+        "updates": { "status": "idle", "location": "Service-Bay" }
+      }
+    },
+    {
+      "delta": 500,
+      "type": "ROBOT_UPDATED",
+      "data": { "robotId": "robot-001", "updates": { "status": "active" } }
+    },
+    {
+      "delta": 500,
+      "type": "ROBOT_UPDATED",
+      "data": { "robotId": "robot-002", "updates": { "status": "active" } }
+    },
+    {
+      "delta": 10000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-016",
+        "updates": { "status": "low_battery", "location": "Charging-Station" }
+      }
+    },
+    {
+      "delta": 5000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-010",
+        "updates": { "status": "low_battery", "location": "Charging-Station" }
+      }
+    },
+    {
+      "delta": 10000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-008",
+        "updates": { "location": "Warehouse", "status": "idle" }
+      }
+    },
+    {
+      "delta": 5000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-009",
+        "updates": { "location": "Warehouse", "status": "idle" }
+      }
+    },
+    {
+      "delta": 5000,
+      "type": "ROBOT_UPDATED",
+      "data": { "robotId": "robot-013", "updates": { "status": "idle" } }
+    },
+    {
+      "delta": 5000,
+      "type": "ROBOT_UPDATED",
+      "data": { "robotId": "robot-014", "updates": { "status": "idle" } }
+    },
+    {
+      "delta": 10000,
+      "type": "ROBOT_UPDATED",
+      "data": { "robotId": "robot-006", "updates": { "battery": 90 } }
+    },
+    {
+      "delta": 5000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-001",
+        "updates": { "battery": 95, "status": "idle" }
+      }
+    },
+    {
+      "delta": 5000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-002",
+        "updates": { "battery": 94, "status": "idle" }
+      }
+    },
+    {
+      "delta": 5000,
+      "type": "ROBOT_UPDATED",
+      "data": {
+        "robotId": "robot-003",
+        "updates": { "battery": 93, "status": "idle" }
+      }
+    },
+    {
+      "delta": 20000,
+      "type": "ROBOT_UPDATED",
+      "data": { "robotId": "robot-015", "updates": { "status": "idle" } }
+    },
+    {
+      "delta": 10000,
+      "type": "ROBOT_UPDATED",
+      "data": { "robotId": "robot-005", "updates": { "status": "idle" } }
+    }
+  ],
+  "logs": [
+    {
+      "delta": 1000,
+      "level": "INFO",
+      "robotId": "system",
+      "message": "Shift cycle started. 17 units detected."
+    },
+    {
+      "delta": 1000,
+      "level": "INFO",
+      "robotId": "robot-015",
+      "message": "Gate-1 security protocol initialized. Area secure."
+    },
+    {
+      "delta": 1000,
+      "level": "INFO",
+      "robotId": "robot-011",
+      "message": "Heavy load detected. Stabilizers engaged in Warehouse."
+    },
+    {
+      "delta": 1000,
+      "level": "INFO",
+      "robotId": "robot-008",
+      "message": "Route calculated: Warehouse -> Zone A"
+    },
+    {
+      "delta": 1000,
+      "level": "INFO",
+      "robotId": "robot-002",
+      "message": "Syncing assembly rate with Unit Alpha. 98% efficiency."
+    },
+    {
+      "delta": 1000,
+      "level": "INFO",
+      "robotId": "robot-003",
+      "message": "Component feeder buffer full. Ready for high-speed ops."
+    },
+    {
+      "delta": 3000,
+      "level": "INFO",
+      "robotId": "robot-016",
+      "message": "Cleaning cycle initiated in Lobby"
+    },
+    {
+      "delta": 2000,
+      "level": "INFO",
+      "robotId": "robot-012",
+      "message": "Sorting algorithm V2.1 active. Processing batch #90."
+    },
+    {
+      "delta": 5000,
+      "level": "WARN",
+      "robotId": "robot-004",
+      "message": "Tip temperature rising above nominal (350°C)"
+    },
+    {
+      "delta": 3000,
+      "level": "INFO",
+      "robotId": "robot-007",
+      "message": "Waking up from sleep mode"
+    },
+    {
+      "delta": 2000,
+      "level": "INFO",
+      "robotId": "robot-009",
+      "message": "Traffic detected in Corridor-2. Re-routing via path B."
+    },
+    {
+      "delta": 15000,
+      "level": "WARN",
+      "robotId": "robot-004",
+      "message": "Cooling system load at 95%"
+    },
+    {
+      "delta": 2000,
+      "level": "ERROR",
+      "robotId": "robot-005",
+      "message": "Vision sensor calibration failed. NullPointerException in module cv_v2."
+    },
+    {
+      "delta": 1000,
+      "level": "WARN",
+      "robotId": "robot-001",
+      "message": "Upstream blockage detected (caused by robot-005)"
+    },
+    {
+      "delta": 500,
+      "level": "ERROR",
+      "robotId": "robot-004",
+      "message": "Thermal shutdown triggered. Safety lock engaged."
+    },
+    {
+      "delta": 1000,
+      "level": "INFO",
+      "robotId": "system",
+      "message": "Emergency maintenance ticket #9921 created"
+    },
+    {
+      "delta": 1000,
+      "level": "INFO",
+      "robotId": "robot-017",
+      "message": "Maintenance request received. Deploying to Zone-C."
+    },
+    {
+      "delta": 2000,
+      "level": "INFO",
+      "robotId": "robot-013",
+      "message": "Spray nozzle pressure stabilized. Auto-cleaning active."
+    },
+    {
+      "delta": 1000,
+      "level": "INFO",
+      "robotId": "robot-014",
+      "message": "Coating thickness verification: Pass. Proceeding to cure."
+    },
+    {
+      "delta": 2000,
+      "level": "INFO",
+      "robotId": "robot-017",
+      "message": "Arrived at Zone-C. Resetting Inspector-Eye firmware."
+    },
+    {
+      "delta": 4000,
+      "level": "INFO",
+      "robotId": "robot-017",
+      "message": "Moving to Zone-B for Welder repair."
+    },
+    {
+      "delta": 3000,
+      "level": "INFO",
+      "robotId": "robot-017",
+      "message": "Coolant refilled for Welder-Prime."
+    },
+    {
+      "delta": 8000,
+      "level": "INFO",
+      "robotId": "robot-004",
+      "message": "System restart... OK. Temperature normal."
+    },
+    {
+      "delta": 2000,
+      "level": "INFO",
+      "robotId": "robot-005",
+      "message": "Vision system online. Resuming inspection."
+    },
+    {
+      "delta": 3000,
+      "level": "WARN",
+      "robotId": "robot-006",
+      "message": "Packaging material low (15%). Requesting resupply."
+    },
+    {
+      "delta": 2000,
+      "level": "INFO",
+      "robotId": "robot-001",
+      "message": "Resuming assembly tasks."
+    },
+    {
+      "delta": 10000,
+      "level": "WARN",
+      "robotId": "robot-016",
+      "message": "Battery critical (15%). Returning to dock."
+    },
+    {
+      "delta": 5000,
+      "level": "INFO",
+      "robotId": "robot-010",
+      "message": "Shift quota met. Returning to base."
+    },
+    {
+      "delta": 20000,
+      "level": "INFO",
+      "robotId": "system",
+      "message": "Shift cycle nearing completion. Power saving mode active."
+    },
+    {
+      "delta": 30000,
+      "level": "INFO",
+      "robotId": "system",
+      "message": "All units idle. Data upload scheduled."
+    }
+  ]
+}
